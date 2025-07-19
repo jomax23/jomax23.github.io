@@ -3,8 +3,9 @@
   --primario: #055ccc;
   --secundario: #a9e4ee;
   --blanco: #ffffff;
+  --negro: #000000;
   --gris: #a8b2d1;
-  --fondo: #001a65;
+  --fondo: #000520;
   --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -38,14 +39,20 @@ body {
   text-align: center;
 }
 
+.perfil :hover, .perfil :focus, .perfil :active{
+
+    box-shadow: 0px 0px 10px var(--negro);
+}
 .perfil img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 500px;
   object-fit: cover;
+  object-position: center top; /* centra en X, alinea arriba en Y */
   border-radius: 50%;
   margin-bottom: 1rem;
-  border: 5px solid var(--secundario);
-}
+  border: 10px solid var(--primario);
+}   
+
 
 .perfil h1 {
   color: var(--secundario);
@@ -53,24 +60,28 @@ body {
   margin-bottom: 2rem;
 }
 
+.sidebar {
+    justify-content: center;
+}
 .sidebar nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  
 }
 
 .sidebar nav a {
   color: var(--blanco);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: color 0.3s;
 }
 
-.sidebar nav a:hover,
-.sidebar nav a.activo {
+.sidebar nav a:hover {
   color: var(--secundario);
   font-weight: bold;
+  
 }
 
 /* Contenido principal */
@@ -183,7 +194,24 @@ section h2 {
 }
 
 .proyecto:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Box Shadow Outset */
+.hvr-box-shadow-outset {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-box-shadow-outset:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 .proyecto img {
@@ -203,6 +231,13 @@ section h2 {
 
 
 /* HABILIDADES */
+
+.habilidades {
+    background: #0d253f;
+}
+.habilidades :hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
 .lista-habilidades {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -211,10 +246,14 @@ section h2 {
   text-align: center;
 }
 
+.lista-habilidades :hover{
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+
+}
 .lista-habilidades li {
   background: #0d253f;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 20px;
   color: var(--blanco);
   font-weight: 500;
 }
