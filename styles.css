@@ -1,10 +1,10 @@
 /* Estilo base */
 :root {
-  --primario: #0a192f;
-  --secundario: #64ffda;
+  --primario: #055ccc;
+  --secundario: #a9e4ee;
   --blanco: #ffffff;
   --gris: #a8b2d1;
-  --fondo: #112240;
+  --fondo: #001a65;
   --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -16,53 +16,116 @@
 
 body {
   font-family: var(--fuente-principal);
+  display: flex;
+  flex-direction: row;
   background-color: var(--fondo);
   color: var(--gris);
   line-height: 1.6;
 }
 
-/* NAV */
-header {
-  background: var(--primario);
-  padding: 1rem 2rem;
-  position: sticky;
+/* Barra lateral */
+.sidebar {
+  position: fixed;
   top: 0;
-  z-index: 1000;
-}
-
-nav {
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--primario);
+  padding: 2rem 1rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-nav h1 a {
+.perfil img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid var(--secundario);
+}
+
+.perfil h1 {
   color: var(--secundario);
-  text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
 }
 
-nav ul {
+.sidebar nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-nav a {
+.sidebar nav a {
   color: var(--blanco);
   text-decoration: none;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
-nav a:hover {
+.sidebar nav a:hover,
+.sidebar nav a.activo {
   color: var(--secundario);
+  font-weight: bold;
 }
+
+/* Contenido principal */
+main.contenido {
+  margin-left: 250px;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+main.contenido h2 {
+  font-size: 50px;
+}
+
+
+
+/* FOOTER */
+footer {
+  background: var(--primario);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gris);
+  border-style:solid;
+}
+
+.redes-sociales a {
+  color: var(--secundario);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.redes-sociales a:hover {
+  text-decoration: underline;
+}
+
+/* SECCIONES */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  color: var(--blanco);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 
 /* HERO */
 .hero {
   padding: 5rem 2rem;
   text-align: center;
-  background: var(--primario);
+  /*background: var(--primario);*/
 }
 
 .hero h2 {
@@ -84,26 +147,8 @@ nav a:hover {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
 }
 
-.cta:hover {
-  background: #52e0c4;
-}
-
-/* SECCIONES */
-section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-section h2 {
-  color: var(--blanco);
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
 
 /* SOBRE MÍ */
 #sobre-mi img {
@@ -111,6 +156,16 @@ section h2 {
   border-radius: 50%;
   display: block;
   margin: 2rem auto;
+}
+
+#sobre-mi p1 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+#sobre-mi p2 {
+  color: var(--primario);  
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 /* PORTFOLIO */
@@ -146,23 +201,29 @@ section h2 {
   text-decoration: underline;
 }
 
+
 /* HABILIDADES */
 .lista-habilidades {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  gap: 4rem;
   list-style: none;
-  padding-left: 0;
   text-align: center;
 }
 
 .lista-habilidades li {
   background: #0d253f;
-  padding: 0.75rem;
+  padding: 1rem;
   border-radius: 8px;
   color: var(--blanco);
   font-weight: 500;
 }
+
+.lista-habilidades h3 {
+  color: var(--secundario);
+  font-size: 30px;
+}
+
 
 /* FORMULARIO */
 form {
@@ -199,24 +260,6 @@ button:hover {
   background-color: #52e0c4;
 }
 
-/* FOOTER */
-footer {
-  background: var(--primario);
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--gris);
-}
-
-.redes-sociales a {
-  color: var(--secundario);
-  margin: 0 0.5rem;
-  text-decoration: none;
-}
-
-.redes-sociales a:hover {
-  text-decoration: underline;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -228,20 +271,4 @@ footer {
   .hero h2 {
     font-size: 2rem;
   }
-}
-
-#nav-menu.abierto {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-  }
-}
-
-nav a.activo {
-  color: var(--secundario);
-  font-weight: bold;
 }
