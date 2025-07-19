@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio de José María</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    
+
+  <!-- Header / Menú de navegación -->
+  <header>
+    <nav>
+      <h1><a href="#inicio">José María Martínez de la Casa Álvarez</a></h1>
+
+      <!-- Botón menú móvil -->
+      <button id="menu-toggle" aria-label="Abrir/cerrar menú">☰</button>
+
+      <!-- Lista de enlaces -->
+      <ul id="nav-menu">
+        <li><a href="#inicio" class="activo">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de bienvenida -->
+  <section id="inicio">
+    <div class="hero">
+      <h2>¡Hola! Soy José María</h2>
+      <p>Estudiante en el grado de Diseño y Desarrollo de videojuegos.</p>
+      <a href="#portfolio" class="cta">Ver proyectos</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy un apasionado del diseño y desarrollo de videojuegos. Me especializo en crear experiencias interactivas únicas combinando arte, narrativa y código.
+    </p>
+    <img src="foto.jpg" alt="Foto de [Tu Nombre]">
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Mis proyectos</h2>
+    <div class="proyectos">
+      <article class="proyecto">
+        <img src="proyecto1.jpg" alt="Nombre del proyecto">
+        <h3>Nombre del proyecto</h3>
+        <p>Descripción corta del proyecto, tecnologías usadas, etc.</p>
+        <a href="enlace-a-proyecto" target="_blank">Ver más</a>
+      </article>
+
+      <article class="proyecto">
+        <img src="proyecto2.jpg" alt="Nombre del proyecto">
+        <h3>Nombre del proyecto</h3>
+        <p>Descripción corta del proyecto, tecnologías usadas, etc.</p>
+        <a href="enlace-a-proyecto" target="_blank">Ver más</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul class="lista-habilidades">
+      <li>Unity</li>
+      <li>Diseño 2D/3D</li>
+      <li>C#, JavaScript, HTML, CSS, Pyhton</li>
+      <li>Blender, Photoshop</li>
+      <li>Localización de videojuegos</li>
+    </ul>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+    <div class="redes-sociales">
+      <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
 </body>
 </html>
