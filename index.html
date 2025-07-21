@@ -1,127 +1,201 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio de José María</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
+
+
+  <link rel="icon" type="image/png" href="./imgs/jomax23Logo.png">
+
+
+
 </head>
 <body>
-
-  <!-- Barra lateral fija -->
-  <aside class="sidebar">
-    
+  <header>
+    <a href="#" class="logo-holder">
+      <div class="logo"><img src="./imgs/jomax23Logo.png" alt="Logo" width="100%"></div>
+      <div class="logo-text">Bienvenidos a mi Portfolio</div>
+    </a>
     <nav>
-      <ul id="nav-menu">
-        <li><a href="#inicio" class="activo">José María</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+      <ul id="menu">
+        <li>
+          <a href="#inicio">Home</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="mailto:josemariamca8@gmail.com" class="button">Contact Me</a>
+        </li>
       </ul>
+      <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+        </svg>
+
+      </a>
     </nav>
-  </aside>
+  </header>
 
-  <!-- Contenido principal -->
-  <main class="contenido">
+  <main>
+    <section id="inicio" class="hero container">
+      <div class="hero-blue">
+        <div>
+          <h1><small>Hola soy</small>
+            Jose Maria
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Eum, nostrum distinctio eos quo esse perspiciatis debitis itaque cupiditate. Porro ipsum dignissimos molestias ratione esse fugit perferendis, ipsa provident tempore voluptatem.</span>
+          </p>
+          <div class="call-to-action">
+            <a href="./CV.pdf" class="button black">View Resume</a>
+            <a href="https://mail.google.com/mail/?view=cm&to=josemariamca8@gmail.com" target="_blank" class="button white">Contact me</a>
 
-    <section id="inicio">
-      <div class="hero">
-        <h2>José María</h2>
-        <p>Portfolio de un estudiante de Diseño y Desarrollo de Videojuegos</p>
-        <div class="perfil">
-            <img src="foto.jpg">
+
+          </div>
+
+          <div class="social-links">
+          <a href="#">
+            <img src="./imgs/jomax23Logo.png" alt="GitHub" width="48">
+          </a>
+          <a href="#">
+            <img src="./imgs/jomax23Logo.png" alt="Instagram" width="48">
+          </a>
+        </div>
+        </div>
+
+        
+      </div>
+      
+      
+
+      
+
+      <div class="hero-yellow">
+        <img src="./imgs/fotoTransparente.png" alt="Jose Maria" width="119%">
+      </div>
+    </section>
+
+    <section class="logos container">
+      <div class="marquee">
+        <div class="track">
+          <img src="./imgs/icons/Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator" width="128">
+          <img src="./imgs/icons/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" width="128">
+          <img src="./imgs/icons/Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere" width="128">
+          <img src="./imgs/icons/Blender_logo_no_text.svg.png" alt="Blender" width="128">
+          <img src="./imgs/icons/Calligrakrita-base.svg.png" alt="Krita" width="128">
+          <img src="./imgs/icons/ibis-paint-x.png" alt="IbisPaint" width="128">
+          <img src="./imgs/icons/Unity_Technologies_logo.svg.png" alt="unity" width="128">
         </div>
       </div>
     </section>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p1>
-        Me llamo José María Martínez de la Casa Álvarez, y estoy estudiando Diseño y Desarrollo de Videojuegos en la Universidad Jaume I, en Castellón de la Plana. Tengo conocimientos de arte y programación, decantándome más por la primera opción. 
-      </p1>
-      <p2>
-        En estos momentos estoy en 5º año de carrera, buscando conseguir experiencia y encontrar una empresa en la que hacer las prácticas.
-      </p2>
+    <section id="skills" class="skills container">
+      <h2>
+        <small>About Me</small>
+        Skills
+      </h2>
+      <div class="holder-blue">
+        <div class="left-column">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="right-column">
+          <h3>A bit about me</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, id consequuntur, quibusdam expedita illum neque molestiae mollitia, nulla recusandae corporis totam! Consequatur vel rerum laboriosam libero assumenda dolores quis? Magni!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, id consequuntur, quibusdam expedita illum neque molestiae mollitia, nulla recusandae corporis totam! Consequatur vel rerum laboriosam libero assumenda dolores quis? Magni!</p>
+        </div>
+      </div>
     </section>
 
-    <section id="portfolio">
-      <h2>Mis proyectos</h2>
-      <div class="proyectos">
-        <article class="proyecto">
-          <img src="proyecto1.jpg" alt="Nombre del proyecto">
-          <h3>Nombre del proyecto</h3>
-          <p>Descripción del proyecto.</p>
-          <a href="#">Ver más</a>
+    <section id="projects" class="work-experience container">
+      <h2>
+        <small>Recent</small>
+        Work Experience
+      </h2>
+      <div class="jobs">
+        <article>
+          <figure>
+            <div>
+              <img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%">
+              <figcaption>
+                Workplace - 1
+              </figcaption>
+            </div>
+          </figure>
+          <h3>Workplace - 1</h3>
+          <div>2000-2020</div>
+          <p>This is an example description for a workplace.</p>
         </article>
-        <article class="proyecto">
-          <img src="proyecto2.jpg" alt="Nombre del proyecto">
-          <h3>Nombre del proyecto</h3>
-          <p>Descripción del proyecto.</p>
-          <a href="#">Ver más</a>
+        <article>
+          <figure>
+            <div>
+              <img src="./imgs/fondo2.jpg" alt="Workplace 2 -" width="100%">
+              <figcaption>
+                Workplace - 2
+              </figcaption>
+            </div>
+          </figure>
+          <h3>Workplace - 2</h3>
+          <div>2000-2020</div>
+          <p>This is an example description for a workplace.</p>
+        </article>
+        <article>
+          <figure>
+            <div>
+              <img src="./imgs/fondo3.jpg" alt="Workplace 3 -" width="100%">
+              <figcaption>
+                Workplace - 3
+              </figcaption>
+            </div>
+          </figure>
+          <h3>Workplace - 3</h3>
+          <div>2000-2020</div>
+          <p>This is an example description for a workplace.</p>
         </article>
       </div>
     </section>
 
-    <section id="habilidades">
-      <h2>Habilidades</h2>
-      
-      <ul class="lista-habilidades">
-        
-        <li>
-            <h3>Plataformas</h3>
-            <p>3dsMax</p>
-            <p>IbisPaint</p>
-            <p>Blender</p>
-            <p>Krita</p>
-            <p>Photoshop</p>
-            <p>Illustrator</p>
-            <p>Premiere</p>
-            <p>Unity</p>
-        </li>
-
-        <li>
-            <h3>Idiomas</h3>
-            <p>Python</p>
-            <p>C#</p>
-            <p>JavaScript</p>
-            <p>HTML</p>
-            <p>CSS</p>
-        </li>
-        
-      </ul>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
-      <div class="redes-sociales">
-        <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+    <section class="bento container">
+      <h2>
+        <small>
+          Previous
+        </small>
+        Completed Projects
+      </h2>
+      <div class="bento-grid">
+        <a href="#" class="bento-item"><img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%"></a>
+        <a href="#" class="bento-item"><img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%"></a>
+        <a href="#" class="bento-item"><img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%"></a>
+        <a href="#" class="bento-item"><img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%"></a>
+        <a href="#" class="bento-item"><img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%"></a>
+        <a href="#" class="bento-item"><img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%"></a>
       </div>
-    </footer>
-
-
-    
-    
+    </section>
 
   </main>
-
 </body>
 </html>
