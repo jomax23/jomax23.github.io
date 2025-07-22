@@ -9,7 +9,7 @@
   --base-100: #f1f1f1;
   --base-400: #555;
   --base-800: #000;
-  --yellow: #ffda4b;
+  --yellow: #4bff96;
   --yellow-100: #fffbe6;
   --yellow-400: #ffda4b;
   --yellow-800: #8b6f00;
@@ -33,6 +33,7 @@
 
   --verde-cardenal: #0C1A1A;
   --verde-azulado-claro: #6ACFC7;
+  --verde-azulado-claro2: #c23ece46;
 
   --azul-intenso: #001233;
   --rojo-coral-claro: #FF595A;
@@ -42,12 +43,20 @@
 }
 
 body {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 20px;
   padding-bottom: 1000px;
   background-color: var(--verde-cardenal);
+  background-image: url("./imgs/txtbg3.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+      letter-spacing: 2px;
+      line-height: 30px;
+
 }
 
 a {
@@ -65,7 +74,7 @@ header {
   justify-content: space-between;
   max-width: 1440px;
   margin: auto;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid var(--verde-azulado-claro);
 
   .logo-holder{
     display: flex;
@@ -73,12 +82,12 @@ header {
     align-items: center;
     font-weight: 600;
     color: var(--verde-azulado-claro);
+    text-decoration: none;
     .logo{
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 32px;
-      background-color: var(--verde-azulado-claro);
       color: var(--verde-azulado-claro);
       height: 64px;
       width: 64px;
@@ -88,6 +97,7 @@ header {
     }
     .logo-text{
       flex: 1;
+      
     }
   }
 
@@ -103,7 +113,7 @@ header {
         a{
           display: inline-block;
           padding: 10px 20px;
-          color: var(--base);
+          color: var(--verde-azulado-claro);
           &:hover{
             background-color: var(--verde-azulado-claro);
             color: var(--verde-cardenal);
@@ -115,7 +125,7 @@ header {
     }
     .mobile-toggle {
       display: none;
-      color: var(--base);
+      color: var(--verde-azulado-claro);
       padding: 10px;
       @media (max-width: 768px) {
         display: inline-block;
@@ -176,7 +186,7 @@ header {
 .button {
   display: inline-block;
   padding: 10px 30px;
-  color: var(--base);
+  color: var(--verde-azulado-claro);
   border-radius: 10px;
   transition: ease 0.3s all;
 
@@ -186,19 +196,21 @@ header {
     color: var(--verde-cardenal)
   }
   &.white {
-    background-color: var(--verde-cardenal);
-    color: var(--base);
+    background-color: rgba(0, 0, 0, 0.5) ;
+    border: var(--verde-azulado-claro) solid 2px;
+    color: var(--verde-azulado-claro);
     &:hover {
-      color: var(--verde-azulado-claro);
-
+      color: var(--background-color);
+      background-color: var(--verde-azulado-claro);
     }
   }
   &.black {
-    background-color: var(--verde-cardenal);
-    color: var(--base);
+    background-color: rgba(0,0,0,0.5) ;
+    border: var(--verde-azulado-claro) solid 2px;
+    color: var(--verde-azulado-claro);
     &:hover {
-      color: var(--verde-azulado-claro);
-      
+      color: var(--background-color);
+      background-color: var(--verde-azulado-claro);
     }
   }
 }
@@ -207,9 +219,12 @@ h1 {
   font-size: 64px;
   line-height: 1;
   margin-bottom: 10px;
+  color: var(--yellow);
   small {
     display: block;
     font-weight: 100;
+    color: var(--yellow-100);
+
   }
   @media (max-width: 1024px){
     font-size: 48px;
@@ -221,16 +236,18 @@ h1 {
     flex-direction: column;
   }
   margin-top: 40px;
-  
+  color: var(--yellow-100);
   .hero-blue {
     flex: 1;
-    background: linear-gradient(135deg, var(--verde-azulado-claro), var(--background-color));
+    background: linear-gradient(135deg, rgba(112, 234, 255, 0.3), rgba(255, 255, 255, 0));
     border-radius: 30px;
-    border: var(--beige) solid 10px;
+    border: var(--verde-azulado-claro) solid 4px;
+    box-shadow: 10px 10px 5px black;
     padding: 30px;
     display: flex;
     justify-content: column;
     span {
+      
       @media (max-width: 768px){
         display: none;
       }
@@ -254,9 +271,10 @@ h1 {
   }
   .hero-yellow{
     flex: 1;
-    background: linear-gradient(135deg, var(--verde-azulado-claro), var(--background-color));
+      background: linear-gradient(135deg, rgba(112, 234, 255, 0.3), rgba(255, 255, 255, 0));
     border-radius: 30px;
-    border: var(--beige) solid 10px;
+    border: var(--verde-azulado-claro) solid 4px;
+    box-shadow: 10px 10px 5px black;
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -264,15 +282,16 @@ h1 {
     img {
       margin-top: -40px;
       margin-bottom: -30px;
-      border-radius: 20px;
+      border-radius: 30px;
     }
   }
 }
 
 .logos {
-    background: linear-gradient(135deg, var(--verde-azulado-claro), var(--background-color));
+  background: linear-gradient(135deg, rgba(112, 234, 255, 0.3), rgba(255, 255, 255, 0));
   border-radius: 30px;
-  border: var(--beige) solid 10px;
+  border: var(--verde-azulado-claro) solid 4px;
+  box-shadow: 10px 10px 5px black;
   padding: 30px 0px;
   @media (max-width: 1024px){
     border-radius: 30px;
@@ -317,14 +336,16 @@ h3 {
   font-weight: 600;
   line-height: 1;
   margin-bottom: 20px;
-  color: var(--verde-cardenal);
+  color: var(--yellow);
+  text-transform: uppercase;
 }
 
 .skills {
   .holder-blue {
-    background: linear-gradient(135deg, var(--verde-azulado-claro), var(--background-color));
+      background: linear-gradient(135deg, rgba(112, 234, 255, 0.3), rgba(255, 255, 255, 0));
     border-radius: 30px;
-    border: var(--beige) solid 10px;
+    border: var(--verde-azulado-claro) solid 4px;
+    box-shadow: 10px 10px 5px black;
     padding: 30px;
     display: flex;
     @media (max-width: 1024px){
@@ -350,6 +371,7 @@ h3 {
 
     .right-column {
       flex: 1;
+      color: var(--verde-azulado-claro);
       p {
         margin-bottom: 20px;
       }
@@ -365,10 +387,11 @@ h3 {
       flex-direction: column;
     }
     article {
-    background: linear-gradient(135deg, var(--verde-azulado-claro), var(--background-color));
+      background: linear-gradient(135deg, rgba(112, 234, 255, 0.3), rgba(255, 255, 255, 0));
       padding: 30px;
       border-radius: 30px;
-      border: var(--beige) solid 10px;
+      box-shadow: 10px 10px 5px black;
+      border: var(--verde-azulado-claro) solid 4px;
       flex: 1;
       h3 {
         margin-top: 20px;
@@ -377,10 +400,11 @@ h3 {
       div {
         font-weight: 600;
         margin-bottom: 5px;
-        color: var(--base);
+        color: var(--verde-azulado-claro);
       }
       p {
         margin-bottom: 10px;
+        color: var(--verde-azulado-claro);
       }
       figure {
         width: 100%;
@@ -444,7 +468,8 @@ h3 {
       padding: 30px;
       background-color: var(--verde-azulado-claro);
       border-radius: 15px;
-      border: var(--beige) solid 10px;
+    border: var(--verde-azulado-claro) solid 4px;
+      box-shadow: 10px 10px 5px black;
       position: relative;
       overflow: hidden;
       img {
