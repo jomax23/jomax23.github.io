@@ -10,7 +10,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
 
@@ -20,11 +28,11 @@
 
 
 </head>
-<body>
+<body style="cursor:default;">
   <header>
-    <a href="" class="logo-holder">
+    <a class="logo-holder">
       <div class="logo"><img src="./imgs/miLogoJOMAX2.png" alt="Logo" width="100%"></div>
-      <div class="logo-text">Bienvenidos a mi Portfolio</div>
+      <div class="logo-text" style="cursor:default;">Bienvenidos a mi Portfolio</div>
     </a>
     <nav>
       <ul id="menu">
@@ -51,6 +59,27 @@
   </header>
 
   <main>
+    <section class="container">
+      <h4>
+        <span>
+<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 16 5-7 6 6.5m6.5 2.5L16 13l-4.286 6M14 10h.01M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+</svg>
+        </span>
+        
+
+        Pasa el ratón por encima de las imágenes para darles color.
+
+        <span>
+<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 16 5-7 6 6.5m6.5 2.5L16 13l-4.286 6M14 10h.01M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+</svg>
+
+        </span>
+        
+
+      </h4>
+    </section>
     <section id="inicio" class="hero container">
       <div class="hero-blue">
         <div>
@@ -64,15 +93,16 @@
             <span>En estos momentos estoy buscando trabajo en el ámbito del arte. Poseo conocimientos de diseño 2D y 3D, animación y sonido.</span>
           </p>
           <div class="call-to-action">
-            <a href="./CV.pdf" class="button black">View Resume</a>
-            <a href="https://mail.google.com/mail/?view=cm&to=josemariamca8@gmail.com" target="_blank" class="button white">Contact me</a>
+            <a onclick="window.open('./CV.pdf')" class="button black" style="cursor: pointer;">Descargar CV</a>
+            <a onclick="window.open('https://mail.google.com/mail/?view=cm&to=josemariamca8@gmail.com')" class="button white" style="cursor: pointer;">Contáctame</a>
 
 
           </div>
 
           <div class="social-links">
-          <a href="https://github.com/jomax23">
-            <img src="./imgs/icons/githubLogo.png" alt="GitHub" width="64">
+          <a href="https://github.com/jomax23" class="logo-pair">
+            <img src="./imgs/icons/githubHolo.png" class="img-front" alt="GitHub" width="100">
+            <img src="./imgs/icons/githubLogo.png" class="img-back" alt="GitHub" width="100">
           </a>
         </div>
         </div>
@@ -84,8 +114,9 @@
 
       
 
-      <div class="hero-yellow">
-        <img src="./imgs/fotoTransparente.png" alt="Jose Maria" width="118%">
+      <div class="hero-yellow cambio-img">
+        <img src="./imgs/fotoTransparente2.png" class="img1" alt="Jose Maria" width="118%">
+        <img src="./imgs/fotoTransparente.png" class="img2" alt="Jose Maria" width="118%">
       </div>
     </section>
 
@@ -94,7 +125,7 @@
     <section id="skills" class="skills container">
       <h2>
         <small>Sobre mis</small>
-        Habilidades
+        HABILIDADES
       </h2>
       <div class="holder-blue">
         <div class="left-column">
@@ -112,8 +143,9 @@
         </div>
         <div class="right-column">
           <h3>¿Quién soy?</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, id consequuntur, quibusdam expedita illum neque molestiae mollitia, nulla recusandae corporis totam! Consequatur vel rerum laboriosam libero assumenda dolores quis? Magni!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, id consequuntur, quibusdam expedita illum neque molestiae mollitia, nulla recusandae corporis totam! Consequatur vel rerum laboriosam libero assumenda dolores quis? Magni!</p>
+          <p>En 2021 comencé los estudios de Diseño y Desarrollo de Videojuegos. Anteriormente ya veía que el arte y el diseño me gustaba, pero al aprender nuevas técnicas y ver trabajos de compañeros e internet supe que me quería dedicar a este mundo.</p>
+          <p>Algunas de las habilidades que destacaría sobre mí son el trabajo en equipo, la capacidad de adaptación y la búsqueda del mejor resultado posible a conseguir.</p>
+          <p>Todavía estoy aprendiendo y me gustaría ganar experiencia para así poder ver hasta donde soy capaz de llegar.</p>
         </div>
       </div>
     </section>
@@ -121,62 +153,51 @@
     <section class="logos container">
       <div class="marquee">
         <div class="track">
-          <img src="./imgs/icons/Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator" width="128">
-          <img src="./imgs/icons/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" width="128">
-          <img src="./imgs/icons/Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere" width="128">
-          <img src="./imgs/icons/Blender_logo_no_text.svg.png" alt="Blender" width="128">
-          <img src="./imgs/icons/Calligrakrita-base.svg.png" alt="Krita" width="128">
-          <img src="./imgs/icons/ibis-paint-x.png" alt="IbisPaint" width="128">
-          <img src="./imgs/icons/Unity-Logo-White.webp" alt="unity" width="200">
-          <img src="./imgs/icons/Fl_studio_logo.png" alt="unity" width="128">
+          <a class="logo-pair"><img src="./imgs/icons/illustratorHolo.png" class="img-front" alt="Illustrator"><img src="./imgs/icons/Adobe_Illustrator_CC_icon.svg.png" class="img-back" alt="Illustrator"></a>
+          <a class="logo-pair"><img src="./imgs/icons/photoshopHolo.png" class="img-front" alt="Photoshop"><img src="./imgs/icons/Adobe_Photoshop_CC_icon.svg.png" class="img-back" alt="Photoshop"></a>
+          <a class="logo-pair"><img src="./imgs/icons/premiereHolo.png" class="img-front" alt="Premiere"><img src="./imgs/icons/Adobe_Premiere_Pro_CC_icon.svg.png" class="img-back" alt="Premiere"></a>
+          <a class="logo-pair"><img src="./imgs/icons/blenderHolo.png" class="img-front" alt="Blender"><img src="./imgs/icons/Blender_logo_no_text.svg.png" class="img-back" alt="Blender"></a>
+          <a class="logo-pair"><img src="./imgs/icons/kritaHolo.png" class="img-front" alt="Krita"><img src="./imgs/icons/Calligrakrita-base.svg.png" class="img-back" alt="Krita"></a>
+          <a class="logo-pair"><img src="./imgs/icons/ibispaintHolo.png" class="img-front" alt="IbisPaint"><img src="./imgs/icons/ibis-paint-x.png" class="img-back" alt="IbisPaint"></a>
+          <a class="logo-pair"><img src="./imgs/icons/unityHolo.png" class="img-front" alt="unity"><img src="./imgs/icons/Unity-Logo-White.png" class="img-back" alt="unity"></a>
+          <a class="logo-pair"><img src="./imgs/icons/flstudioHolo.png" class="img-front" alt="flstudio"><img src="./imgs/icons/Fl_studio_logo.png" class="img-back" alt="flstudio"></a>
         </div>
       </div>
     </section>
 
     <section id="projects" class="work-experience container">
       <h2>
-        <small>Mis</small>
-        TOP 3
+        <small>Mis últimos</small>
+        TRABAJOS
       </h2>
       <div class="jobs">
         <article>
           <figure>
-            <div>
-              <img src="./imgs/fondo1.jpg" alt="Workplace 1 -" width="100%">
+            <div class="img-pair">
+              <img src="./imgs/trabajos/habitacionCastello3Holo.jpg" class="img-front1" alt="Espada de Tanjiro">
+              <img src="./imgs/trabajos/habitacionCastello3.jpg" class="img-back1" alt="Espada de Tanjiro">
               <figcaption>
-                Workplace - 1
+                Diseño y decoración de habitación
               </figcaption>
             </div>
           </figure>
-          <h3>Workplace - 1</h3>
-          <div>2000-2020</div>
-          <p>This is an example description for a workplace.</p>
+          <h3>Diseño y decoración de habitación</h3>
+          <div>Blender</div>
+          <p>Recreación y decoración de mi habitación con un estilo cálido y acogedor.</p>
         </article>
         <article>
           <figure>
-            <div>
-              <img src="./imgs/fondo2.jpg" alt="Workplace 2 -" width="100%">
+            <div class="img-pair">
+              <img src="./imgs/trabajos/espadaTanjiro2Holo.png" class="img-front1" alt="Espada de Tanjiro">
+              <img src="./imgs/trabajos/espadaTanjiro2.png" class="img-back1" alt="Espada de Tanjiro">
               <figcaption>
-                Workplace - 2
+                Espada de Tanjiro
               </figcaption>
             </div>
           </figure>
-          <h3>Workplace - 2</h3>
-          <div>2000-2020</div>
-          <p>This is an example description for a workplace.</p>
-        </article>
-        <article>
-          <figure>
-            <div>
-              <img src="./imgs/fondo3.jpg" alt="Workplace 3 -" width="100%">
-              <figcaption>
-                Workplace - 3
-              </figcaption>
-            </div>
-          </figure>
-          <h3>Workplace - 3</h3>
-          <div>2000-2020</div>
-          <p>This is an example description for a workplace.</p>
+          <h3>Espada de Tanjiro (Demon Slayer)</h3>
+          <div>Blender</div>
+          <p>Modelado 3D de la espada Nichirin de Tanjiro Kamado, de la serie de animación Demon Slayer (Kimetsu no Yaiba).</p>
         </article>
       </div>
     </section>
@@ -186,18 +207,64 @@
         <small>
           Otros
         </small>
-        Proyectos
+        PROYECTOS
       </h2>
       
     </section>
     <section class="bento container">
-      <a class="bento-item"><img src="./imgs/trabajos/espadaTanjiro2.png" alt="espadaTanjiro2" width="100%">Espada de Tanjiro</a>
-      <a class="bento-item"><img src="./imgs/trabajos/boteColonia.jpg" alt="boteColonia" width="100%"></a>
-      <a class="bento-item"><img src="./imgs/trabajos/habCast3.png" alt="habCast3" width="100%"></a>
-      <a class="bento-item"><img src="./imgs/trabajos/habitacionCastello3.jpg" alt="habitacionCastello3" width="100%"></a>
-      <a class="bento-item"><img src="./imgs/trabajos/sombreroLuffy2.png" alt="sombreroLuffy2" width="100%"></a>
-      <a class="bento-item mini"><img src="./imgs/trabajos/markMinimalista.jpg" alt="markMinimalista" width="100%"></a>
-      <a class="bento-item mini"><img src="./imgs/trabajos/sullyMinimalista2.jpg" alt="sullyMinimalista2" width="100%"></a>
+      <a class="bento-item">
+        <img src="./imgs/trabajos/espadaTanjiro2Holo.png" class="img-front" alt="">
+        <img src="./imgs/trabajos/espadaTanjiro2.png" class="img-back" alt="">
+        <figcaption>
+          Espada de Tanjiro (Demon Slayer)
+        </figcaption>
+      </a>
+      <a class="bento-item">
+        <img src="./imgs/trabajos/boteColoniaHolo.jpg" class="img-front" alt="boteColonia">
+        <img src="./imgs/trabajos/boteColonia.jpg" class="img-back" alt="boteColonia">
+        <figcaption>
+          Ambientador
+        </figcaption>
+      </a>
+      <a class="bento-item">
+        <img src="./imgs/trabajos/habCast3Holo.png" class="img-front" alt="habCast3">
+        <img src="./imgs/trabajos/habCast3.png" class="img-back" alt="habCast3">
+        <figcaption>
+          Diseño y decoración de habitación 1
+        </figcaption>
+      </a>
+      <a class="bento-item">
+        <img src="./imgs/trabajos/habitacionCastello3Holo.jpg" class="img-front" alt="habitacionCastello3">
+        <img src="./imgs/trabajos/habitacionCastello3.jpg" class="img-back" alt="habitacionCastello3">
+        <figcaption>
+          Diseño y decoración de habitación 2
+        </figcaption>
+      </a>
+      <a class="bento-item">
+        <img src="./imgs/trabajos/sombreroLuffy2Holo.png" class="img-front" alt="sombreroLuffy2">
+        <img src="./imgs/trabajos/sombreroLuffy2.png" class="img-back" alt="sombreroLuffy2">
+        <figcaption>
+          Sombrero de paja de Luffy (One Piece)
+        </figcaption>
+      </a>
+
+      <div class="bento-mini-group">
+        <a class="bento-item mini">
+          <img src="./imgs/trabajos/markMinimalistaHolo.jpg" class="img-front" alt="markMinimalista">
+          <img src="./imgs/trabajos/markMinimalista.jpg" class="img-back"  alt="markMinimalista">
+          <figcaption>
+            Wallpaper de Mark Evans <p>(Inazuma Eleven)</p>
+          </figcaption>
+        </a>
+        <a class="bento-item mini">
+          <img src="./imgs/trabajos/sullyMinimalista2Holo.jpg" class="img-front" alt="sullyMinimalista2">
+          <img src="./imgs/trabajos/sullyMinimalista2.jpg" class="img-back"  alt="sullyMinimalista2">
+          <figcaption>
+            Wallpaper de James P. Sullivan <p>(Monstruos S.A.)</p>
+          </figcaption>
+        </a>
+      </div>
+      
     </section>
   </main>
 </body>
