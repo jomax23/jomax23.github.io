@@ -80,3 +80,53 @@ function loopAnimacion(timestamp) {
 window.onload = () => {
   requestAnimationFrame(loopAnimacion);
 };
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const imagenDestino = document.getElementById('miImagen');
+  const items = document.querySelectorAll('.bento-item');
+
+  let fadeInterval = null;
+  let hoverTimeout;
+
+  function fadeTo(targetOpacity, duration = 100) {
+    clearInterval(fadeInterval);
+    const startOpacity = parseFloat(getComputedStyle(imagenDestino).opacity);
+    const startTime = Date.now();
+
+    fadeInterval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const currentOpacity = startOpacity + (targetOpacity - startOpacity) * progress;
+      imagenDestino.style.opacity = currentOpacity;
+
+      if (progress === 1) clearInterval(fadeInterval);
+    }, 16);
+  }
+
+  imagenDestino.style.opacity = '0';
+  imagenDestino.style.position = 'fixed';
+  imagenDestino.style.top = '50%';
+  imagenDestino.style.left = '50%';
+  imagenDestino.style.transform = 'translate(-50%, -50%)';
+  imagenDestino.style.zIndex = '9999';
+  imagenDestino.style.pointerEvents = 'none';
+
+  items.forEach(item => {
+    const imgBack = item.querySelector('.img-back');
+
+    item.addEventListener('mouseenter', () => {
+      hoverTimeout = setTimeout(() => {
+        if (imgBack) {
+          imagenDestino.src = imgBack.src;
+          fadeTo(1);
+        }
+      }, 1000);
+    });
+
+    item.addEventListener('mouseleave', () => {
+      clearTimeout(hoverTimeout);
+      fadeTo(0);
+    });
+  });
+});

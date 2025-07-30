@@ -614,6 +614,7 @@ h5 {
   }
 }
 
+
 .img-pair img {
   position: absolute;
   top: 0;
@@ -714,12 +715,12 @@ h5 {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    width: 100%;
+    width: 50%;
     aspect-ratio: 1 / 1; 
   }
 
   .bento-mini-item {
-    width: 43.5%;
+    width: 100%;
   }
 
   @media (max-width: 768px) {
@@ -727,7 +728,7 @@ h5 {
     align-items: center;
 
     .bento-item {
-      width: 90%;
+      width: 100%;
       aspect-ratio: 1 / 1;
     }
 
@@ -778,3 +779,22 @@ h5 {
   position: relative;
   display: inline-block;
 }
+
+
+#miImagen {
+  transition: opacity 0.4s ease;
+}
+
+.imagen-centrada {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;   /* 100% del ancho de la ventana */
+  height: 75vh;
+  object-fit: contain;
+  z-index: 9999;
+  pointer-events: none;
+  filter:drop-shadow(0 0 100px black) drop-shadow(0 0 10px black) drop-shadow(0 0 50px black);
+}
+
