@@ -645,7 +645,7 @@ h5 {
   opacity: 1;
 }
 
-.bento {
+.bento1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -710,34 +710,74 @@ h5 {
       opacity: 1;
     }
   }
+}
 
-  .bento-mini-group {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 50%;
-    aspect-ratio: 1 / 1; 
-  }
+.bento2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 
-  .bento-mini-item {
-    width: 100%;
-  }
+  .bento-item {
+    width: 30%;
+    aspect-ratio: 9 / 16; 
+    position: relative;
+    border-radius: 15px;
+    border: 4px solid var(--neon-azul-claro);
+    box-shadow: 0px 0px 5px var(--neon-azul-claro);
+    overflow: hidden;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-
-    .bento-item {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: opacity 0.3s ease;
     }
 
-    .bento-item.mini {
-      width: 90%;
+    figcaption {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(0,0,0,0.6);
+          color: var(--neon-azulado-claro);
+          text-align: center;
+          font-size: 30px;
+          padding: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transition: ease 0.3s all;
+          font-weight: bold;
+        }
+        &:hover {
+          figcaption {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+    .img-back {
+      z-index: 0;
+      opacity: 0;
+    }
+
+    .img-front {
+      z-index: 1;
+      opacity: 0.75;
+    }
+
+    &:hover .img-front {
+      opacity: 0;
+    }
+    &:hover .img-back {
+      opacity: 1;
     }
   }
 }
-
 
 .neon-border {
   animation: neon-glow-soft 2.5s infinite alternate;
@@ -793,6 +833,19 @@ h5 {
   width: 75vw;   /* 100% del ancho de la ventana */
   height: 75vh;
   object-fit: contain;
+  z-index: 9999;
+  pointer-events: none;
+  filter:drop-shadow(0 0 100px black) drop-shadow(0 0 10px black) drop-shadow(0 0 50px black);
+}
+
+.imagen-centradaBG {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;   /* 100% del ancho de la ventana */
+  height: 100vh;
+  object-fit: cover;
   z-index: 9999;
   pointer-events: none;
   filter:drop-shadow(0 0 100px black) drop-shadow(0 0 10px black) drop-shadow(0 0 50px black);

@@ -84,6 +84,7 @@ window.onload = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const imagenDestino = document.getElementById('miImagen');
+  const imagenBG = document.getElementById('miImagenBG');
   const items = document.querySelectorAll('.bento-item');
 
   let fadeInterval = null;
@@ -99,11 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const progress = Math.min(elapsed / duration, 1);
       const currentOpacity = startOpacity + (targetOpacity - startOpacity) * progress;
       imagenDestino.style.opacity = currentOpacity;
+      imagenBG.style.opacity = currentOpacity - 0.1;
 
       if (progress === 1) clearInterval(fadeInterval);
     }, 16);
   }
 
+  imagenBG.style.opacity = '0';
   imagenDestino.style.opacity = '0';
   imagenDestino.style.position = 'fixed';
   imagenDestino.style.top = '50%';
