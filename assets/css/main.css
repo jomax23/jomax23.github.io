@@ -510,7 +510,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 50px;
   font-weight: 700;
   position: relative;
 }
@@ -911,6 +911,7 @@ section,
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--heading-color);
+
 }
 
 .about .profile-content .profession {
@@ -1006,7 +1007,7 @@ section,
 
 .about .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   margin-bottom: 2.5rem;
   padding: 2rem;
@@ -1028,7 +1029,7 @@ section,
 }
 
 .about .stats-grid .stat-item .stat-number {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--accent-color);
   display: block;
@@ -1228,6 +1229,8 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
+
+
 .skills .skills-category {
   background-color: var(--surface-color);
   padding: 30px;
@@ -1235,6 +1238,7 @@ section,
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   height: 100%;
   transition: transform 0.3s;
+  padding-bottom: 15px;
 }
 
 .skills .skills-category:hover {
@@ -1242,7 +1246,7 @@ section,
 }
 
 .skills .skills-category h3 {
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 15px;
@@ -1393,7 +1397,8 @@ section,
   height: 200px;
   object-fit: cover;
   border: 5px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-radius: 50%;
+  border-radius: 30%;
+
 }
 
 .resume .resume-side h3 {
@@ -2143,14 +2148,14 @@ section,
 
 .contact .info-item .content h4 {
   color: var(--contrast-color);
-  font-size: 1.25rem;
+  font-size: 1.65rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .contact .info-item .content p {
   margin-bottom: 0.25rem;
-  font-size: 0.95rem;
+  font-size: 1.35rem;
 }
 
 .contact .info-item .content p:last-child {
@@ -2540,11 +2545,4 @@ section,
   .service-details .related-services {
     margin-top: 30px;
   }
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
