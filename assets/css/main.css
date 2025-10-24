@@ -645,10 +645,14 @@ section,
 }
 
 .hero .hero-text .lead span {
-  color: var(--accent-color);
+  color: var(--default-color);
   font-weight: 600;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--default-color);
   padding-bottom: 2px;
+  text-shadow:
+    0 0 20px #00ffffbe,
+    0 0 40px #09ececeb,
+    0 0 80px #0aeaead0;
 }
 
 .hero .hero-text .description {
