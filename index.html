@@ -1,794 +1,489 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Jose Maria</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>José María Martínez de la Casa | Game Artist & Diseñador de Videojuegos</title>
+  <meta name="description" content="Portfolio de José María Martínez de la Casa Álvarez, diseñador y desarrollador de videojuegos. Arte digital, modelado 3D, edición de vídeo y sonido." />
+  <meta name="author" content="José María Martínez de la Casa Álvarez" />
 
-  <!-- Favicons -->
-  <link href="assets/img/miLogoJOMAX.png" rel="icon">
-  <link href="assets/img/miLogoJOMAX.png" rel="apple-touch-icon">
+  <!-- Open Graph: cómo se ve tu web al compartirla en LinkedIn, WhatsApp, etc. -->
+  <meta property="og:title" content="José María | Game Artist & Diseñador" />
+  <meta property="og:description" content="Arte digital, modelado 3D y diseño de videojuegos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="[jomax23.github.io](https://jomax23.github.io/)" />
+  <!-- CAMBIAR: imagen de vista previa (1200x630 px recomendado) -->
+  <meta property="og:image" content="[jomax23.github.io](https://jomax23.github.io/assets/img/og-image.jpg)" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- CAMBIAR: tu favicon -->
+  <link rel="icon" href="assets/img/profile/logo_transparente.png" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
-
-
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap)" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
 
-<body class="index-page">
-
-  <header id="header" class="header dark-background d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="header-container d-flex flex-column align-items-start">
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> Sobre mí</a></li>
-          <li><a href="#skills"><i class="bi bi-list-ul navicon"></i> Habilidades</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Servicios</a></li>
-          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contacto</a></li>
-        </ul>
-      </nav>
-
-      <div class="social-links text-center">
-        <a href="https://www.youtube.com/@jomax_23yt" class="youtube"><i class="bi bi-youtube"></i></a>
-        <a href="https://www.twitch.tv/jomax_23" class="twitch"><i class="bi bi-twitch"></i></a>
-        <a href="https://www.instagram.com/josemariamca8?igsh=MTE2Zm5idm14MmQ4cQ==" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.tiktok.com/@jomax23_designs" class="tiktok"><i class="bi bi-tiktok"></i></a>
+  <!-- ===== NAVEGACIÓN ===== -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Principal">
+      <a href="#inicio" class="logo"><img src="assets/img/profile/logo_transparente.png" alt=""><span></span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#trayectoria">Trayectoria</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Cambiar tema">☀</button>
+        <button class="icon-btn nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
       </div>
-
-    </div>
-
+    </nav>
   </header>
 
-  <main class="main">
+  <main id="main">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__text reveal">
+          <span class="badge"><span class="dot"></span> Disponible para prácticas</span>
+          <h1>Hola, soy <span class="gradient">José María</span></h1>
+          <p class="hero__role">Diseño y Desarrollo de Videojuegos · <span id="typed">Arte digital</span></p>
+          <p class="hero__desc">
+            Estudiante de último curso en la Universitat Jaume I, en búsqueda de una oportunidad laboral en el sector creativo. Busco seguir desarrollándome como diseñador, aportar mis conocimientos en arte 2D, modelado 3D, edición de vídeo y producción sonora, y demostrar mis habilidades trabajando en proyectos profesionales.
+          </p>
+          <div class="hero__cta">
+            <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+            <!-- CAMBIAR si renombras tu CV -->
+            <a href="CV_JoseMaria_MartinezdelaCasaAlvarez.pdf" class="btn btn--ghost" download>Descargar CV ↓</a>
+          </div>
+          <ul class="socials">
+            <!-- CAMBIAR: pon tus perfiles reales (borra los que no uses) -->
+<li>
+  <a href="https://www.linkedin.com/in/josé-maría-martínez-de-la-casa-álvarez-b00559315"
+     target="_blank"
+     rel="noopener">
+    LinkedIn
+  </a>
+</li>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+<li>
+  <a href="https://www.youtube.com/@jomax23"
+     target="_blank"
+     rel="noopener">
+    YouTube
+  </a>
+</li>
 
-      <div class="background-elements">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
+<li>
+  <a href="https://www.twitch.tv/jomax_23"
+     target="_blank"
+     rel="noopener">
+    Twitch
+  </a>
+</li>
+
+<li>
+  <a href="https://www.tiktok.com/@jomax23_designs?lang=es"
+     target="_blank"
+     rel="noopener">
+    TikTok
+  </a>
+</li>
+
+</ul>
+        </div>
+        <div class="hero__img reveal">
+          <!-- CAMBIAR: tu foto de perfil (cuadrada, mínimo 600x600 px) -->
+          <img src="assets/img/profile2.jpg" alt="Foto de José María Martínez de la Casa" width="420" height="420" />
+        </div>
       </div>
+      <a href="#sobre-mi" class="scroll-hint" aria-label="Bajar">↓</a>
+    </section>
 
-      <div class="hero-content">
-
-        <div class="container">
-          <div class="row align-items-center">
-
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-              <div class="hero-text">
-                <h1>Mi Portfolio</h1>
-                <h2>José María</h2>
-                <p class="lead">Soy un <span class="typed" data-typed-items="Diseñador y Desarrollador de Videojuegos"></span></p>
-                <p class="description">Desde 2021 estudio el grado de DDV, y actualmente busco una empresa o estudio donde hacer las prácticas. Me considero un chico responsable y trabajador, con ganas de aprender y adquirir experiencia.</p>
-
-                <div class="hero-actions">
-                  <a href="CV_JoseMaria_MartinezdelaCasaAlvarez.pdf" class="btn btn-primary">Descarga mi CV</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-              <div class="hero-visual">
-                <div class="profile-container">
-                  <div class="profile-background"></div>
-                  <img src="assets/img/profile/profile-square-3.jpg" alt="José María" class="profile-image">
-                </div>
-              </div>
-            </div>
-
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="section" id="sobre-mi">
+      <div class="container about">
+        <div class="section__head reveal">
+          <span class="eyebrow">01 · Sobre mí</span>
+          <h2>Apasionado por el arte y el diseño</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>Desde pequeño me ha gustado dibujar, pintar y hacer manualidades. Conforme conocía más sobre informática fui aprendiendo técnicas y estilos que me llevaron a querer dedicarme al <strong>arte digital</strong>.</p>
+            <p>Además del diseño, me encanta editar fotos y vídeos, modelar en 3D y componer música. Me considero responsable, trabajador y con muchas ganas de aprender en un equipo real.</p>
+            <ul class="facts">
+              <li><span>Especialización</span>Arte, edición de imagen/vídeo y sonido</li>
+              <li><span>Educación</span>Grado en DDV · Universitat Jaume I</li>
+              <li><span>Idiomas</span>Español, Valenciano, Inglés</li>
+              <li><span>Ubicación</span>Castelló de la Plana, España</li>
+            </ul>
+          </div>
+          <div class="stats reveal">
+            <!-- CAMBIAR: actualiza tus cifras -->
+            <div class="stat"><strong data-count="30">0</strong><span>Proyectos completados</span></div>
+            <div class="stat"><strong data-count="11">0</strong><span>Herramientas dominadas</span></div>
+            <div class="stat"><strong data-count="5">0</strong><span>Años formándome</span></div>
           </div>
         </div>
       </div>
+    </section>
 
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Sobre mí</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="profile-card">
-              <div class="profile-header">
-                <div class="profile-image">
-                  <img src="assets/img/profile/profile-square-2.jpg" alt="Profile Image" class="img-fluid">
-                </div>
-                <div class="profile-badge">
-                  <i class="bi bi-check-circle-fill"></i>
-                </div>
-              </div>
-
-              <div class="profile-content">
-                <h3>José María</h3>
-                <h3>Martínez de la Casa Álvarez</h3>
-                <p class="profession">Diseñador y Desarrollador de Videojuegos</p>
-
-                <div class="contact-links">
-                  <a href="mailto:josemariamca8@gmail.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    josemariamca8@gmail.com
-                  </a>
-                  <a href="tel:+34661467670" class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    +34 661 46 76 70
-                  </a>
-                  <a href="https://maps.app.goo.gl/gRbMKjsN7EMovfXf7" class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    Castelló de la Plana, España
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-content">
-              <div class="section-header">
-                <span class="badge-text">Conóceme</span>
-                <h2>Apasionado por el Arte y Diseño</h2>
-              </div>
-
-              <div class="description">
-                <p>Desde pequeño me ha gustado mucho dibujar, pintar, hacer manualidades, y conforme iba creciendo y conociendo más sobre informática he ido aprendiendo técnicas y estilos que han hecho que me quiera dedicar al mundo del arte digital.</p>
-
-                <p>Además de diseño me encanta editar tanto fotos como vídeos, modelar en 3D, componer música, etc. </p>
-              </div>
-
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number">30+</div>
-                  <div class="stat-label">Proyectos Completados</div>
-                </div>
-              </div>
-
-              <div class="details-grid">
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Especialización</span>
-                    <span class="detail-value">Diseño artístico, edición de imagen y vídeo y producción sonora</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Nivel de experiencia</span>
-                    <span class="detail-value">Estudiante Universitario</span>
-                  </div>
-                </div>
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Educación</span>
-                    <span class="detail-value">Grado en Diseño y Desarrollo de Videojuegos, Universitat Jaume I</span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Idiomas</span>
-                    <span class="detail-value">Español, Valenciano, Inglés</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Habilidades</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>Diseño</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Blender</h4>
-                    <span class="skill-percentage">70%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>3dsMax</h4>
-                    <span class="skill-percentage">50%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Krita</h4>
-                    <span class="skill-percentage">95%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Substance Painter</h4>
-                    <span class="skill-percentage">20%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Frontend Skills -->
-          </div>
-
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Imagen</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Photoshop</h4>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Illustrator</h4>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>IbisPaintX</h4>
-                    <span class="skill-percentage">95%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Backend Skills -->
-            
-          </div>
-
-          <div class="col-lg-6">
-            <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Vídeo</h3>
-              <div class="skills-animation">
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Premiere</h4>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>After Effects</h4>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Shotcut</h4>
-                    <span class="skill-percentage">50%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h4>Canva</h4>
-                    <span class="skill-percentage">50%</span>
-                  </div>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-
-              </div>
-            </div><!-- End Backend Skills -->
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="row">
-            <div class="col-lg-3 filter-sidebar">
-              <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
-                <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">Todos los proyectos</li>
-                  <li data-filter=".filter-3d">Modelos 3D</li>
-                  <li data-filter=".filter-wp">Fondos de pantalla</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-9">
-              <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/AxelBlazeWP.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/AxelBlazeWP.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/espadaTanjiro2.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/espadaTanjiro2.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/benLobo1.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/benLobo1.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/benLobo2.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/benLobo2.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/boteColonia.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/boteColonia.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/Gear5_Luffy.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/Gear5_Luffy.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/Goku_Black_Rose.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/Goku_Black_Rose.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/Haikyuu_Wallpaper.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/Haikyuu_Wallpaper.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/habCast3.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/habCast3.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/habitacionCastello3.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/habitacionCastello3.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/Mark_VS_Byron.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/Mark_VS_Byron.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/markMinimalista.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/markMinimalista.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/Rath.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/Rath.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/ShawnFrosteWP.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/ShawnFrosteWP.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-3d">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/sombreroLuffy2.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/sombreroLuffy2.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/sullyMinimalista2.jpg" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/sullyMinimalista2.jpg" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-wp">
-                  <div class="portfolio-wrap">
-                    <img src="assets/img/portfolio/Yuji_Itadori.png" class="img-fluid" alt="Portfolio Image" loading="lazy">
-                    <div class="portfolio-info">
-                      <div class="content">
-                        <div class="portfolio-links">
-                          <a href="assets/img/portfolio/Yuji_Itadori.png" class="glightbox"><i class="bi bi-plus-lg"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-
-              </div><!-- End Portfolio Container -->
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Servicios y Aptitudes</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-       
-
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-palette"></i>
-              </div>
-              
-              <h3>
-                  Diseño <span>gráfico</span>
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-camera-video"></i>
-              </div>
-              
-              <h3>
-                  Edición <span>de imagen y vídeo</span>
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-square"></i>
-              </div>
-              
-              <h3>
-                  Modelaje <span>3D</span>
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-person-video"></i>
-              </div>
-              
-              <h3>
-                  Videojuegos
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-person-workspace"></i>
-              </div>
-              
-              <h3>
-                  Compañerismo
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-clipboard-check"></i>
-              </div>
-             
-              <h3>
-                Compromiso
-              </h3>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card position-relative z-1">
-              <div class="service-icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              
-              <h3>
-                  Innovación
-              </h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contacto</h2>
-      </div><!-- End Section Title -->
-
+    <!-- ===== PROYECTOS ===== -->
+    <section class="section section--alt" id="proyectos">
       <div class="container">
-
-        <div class="row g-4 g-lg-5">
-          <div class="">
-            <div class="info-box">
-              <h3>Información de Contacto</h3>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <a href="https://maps.app.goo.gl/gRbMKjsN7EMovfXf7"><i class="bi bi-geo-alt"></i></a>
-                  
-                </div>
-                <div class="content">
-                  <h4>Localización</h4>
-                  <p>Calle Botánico Cavanilles 26 2K</p>
-                  <p>Castelló de la Plana, 12006</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <a href="tel:+34661467670"><i class="bi bi-telephone"></i></a>
-                  
-                </div>
-                <div class="content">
-                  <h4>Teléfono</h4>
-                  <p>+34 661 46 76 70</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="icon-box">
-                  <a href="mailto:josemariamca8@gmail.com"><i class="bi bi-envelope"></i></a>
-                  
-                </div>
-                <div class="content">
-                  <h4>Correo</h4>
-                  <p>josemariamca8@gmail.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
+        <div class="section__head reveal">
+          <span class="eyebrow">02 · Proyectos</span>
+          <h2>Trabajos seleccionados</h2>
+          <p>Haz clic en cualquier proyecto para ver los detalles.</p>
         </div>
 
+        <!-- Los data-filter deben coincidir con el data-category de cada tarjeta -->
+        <div class="filters reveal" role="tablist">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="3d">Modelos 3D</button>
+          <button class="filter" data-filter="2d">Ilustración / Fondos</button>
+          <button class="filter" data-filter="game">Videojuegos</button>
+        </div>
+
+        <div class="projects" id="projects">
+          <!--
+            ===== PLANTILLA DE PROYECTO =====
+            Para añadir un proyecto, copia un <article> completo y cambia:
+              - data-category  → 3d | 2d | game
+              - data-title, data-desc, data-tools, data-link → lo que sale en la ventana de detalle
+              - src y alt de la <img> → TU IMAGEN (recomendado 1200x900 px, .webp o .jpg)
+          -->
+
+          <!-- PROYECTO 1 — CAMBIAR imagen, título y descripción -->
+          <article class="card reveal" data-category="2d"
+            data-title="Axel Blaze – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/AxelBlazeWP.jpg" alt="Wallpaper de Axel Blaze" loading="lazy" />
+            <div class="card__info"><h3>Axel Blaze</h3><span>Ilustración 2D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="2d"
+            data-title="Gear 5 Luffy – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/Gear5_Luffy.png" alt="Wallpaper de Gear 5 Luffy" loading="lazy" />
+            <div class="card__info"><h3>Gear 5 Luffy</h3><span>Ilustración 2D</span></div>
+          </article>
+          
+          <article class="card reveal" data-category="2d"
+            data-title="Goku Black Rose – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/Goku_Black_Rose.png" alt="Wallpaper de Goku Black Rose" loading="lazy" />
+            <div class="card__info"><h3>Goku Black Rose</h3><span>Ilustración 2D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="2d"
+            data-title="Mark Minimalista – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/markMinimalista.jpg" alt="Wallpaper de Mark Minimalista" loading="lazy" />
+            <div class="card__info"><h3>Mark Minimalista</h3><span>Ilustración 2D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="2d"
+            data-title="Sully Minimalista – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/sullyMinimalista2.jpg" alt="Wallpaper de Sully Minimalista" loading="lazy" />
+            <div class="card__info"><h3>Sully Minimalista</h3><span>Ilustración 2D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="2d"
+            data-title="Shawn Froste – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/ShawnFrosteWP.jpg" alt="Wallpaper de Shawn Froste" loading="lazy" />
+            <div class="card__info"><h3>Shawn Froste</h3><span>Ilustración 2D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="2d"
+            data-title="Yuji Itadori – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/Yuji_Itadori.png" alt="Wallpaper de Yuji Itadori" loading="lazy" />
+            <div class="card__info"><h3>Yuji Itadori</h3><span>Ilustración 2D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="2d"
+            data-title="Rath – Wallpaper"
+            data-desc="Ilustración digital tipo fondo de pantalla."
+            data-tools="Krita · Photoshop"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/Rath.png" alt="Wallpaper de Rath" loading="lazy" />
+            <div class="card__info"><h3>Rath</h3><span>Ilustración 2D</span></div>
+          </article>
+
+          <!-- PROYECTO 2 -->
+          <article class="card reveal" data-category="3d"
+            data-title="Espada de Tanjiro"
+            data-desc="Modelado y texturizado de un arma."
+            data-tools="Blender · Substance Painter"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/espadaTanjiro2.png" alt="Modelo 3D de espada" loading="lazy" />
+            <div class="card__info"><h3>Espada de Tanjiro</h3><span>Modelo 3D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="3d"
+            data-title="Modelo 3D de habitación"
+            data-desc="Modelado y texturizado de una habitación."
+            data-tools="Blender · Substance Painter"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/habCast3.png" alt="Modelo 3D de habitación" loading="lazy" />
+            <div class="card__info"><h3>Modelo 3D de habitación</h3><span>Modelo 3D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="3d"
+            data-title="Modelo 3D de habitación"
+            data-desc="Modelado y texturizado de una habitación."
+            data-tools="Blender · Substance Painter"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/habitacionCastello3.jpg" alt="Modelo 3D de habitación" loading="lazy" />
+            <div class="card__info"><h3>Modelo 3D de habitación</h3><span>Modelo 3D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="3d"
+            data-title="Bote de colonia"
+            data-desc="Modelado y texturizado de un bote de colonia."
+            data-tools="Blender · Substance Painter"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/boteColonia.jpg" alt="Modelo 3D de bote de colonia" loading="lazy" />
+            <div class="card__info"><h3>Bote de colonia</h3><span>Modelo 3D</span></div>
+          </article>
+
+          <article class="card reveal" data-category="3d"
+            data-title="Sombrero de Luffy"
+            data-desc="Modelado y texturizado del sombrero de Luffy."
+            data-tools="Blender · Substance Painter"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/sombreroLuffy2.png" alt="Modelo 3D del sombrero de Luffy" loading="lazy" />
+            <div class="card__info"><h3>Sombrero de Luffy</h3><span>Modelo 3D</span></div>
+          </article>
+
+          <!-- PROYECTO 3 -->
+          <article class="card reveal" data-category="3d"
+            data-title="Ben Lobo"
+            data-desc="Modelado de personaje."
+            data-tools="Blender · 3ds Max"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/benLobo1.jpg" alt="Personaje Ben Lobo" loading="lazy" />
+            <div class="card__info"><h3>Ben Lobo</h3><span>Modelo 3D</span></div>
+          </article>
+
+          <!-- PROYECTO 4 -->
+          <article class="card reveal" data-category="3d"
+            data-title="Ben Lobo – Vista 2"
+            data-desc="CAMBIAR: descripción."
+            data-tools="Blender"
+            data-link="">
+            <!-- CAMBIAR: imagen del proyecto -->
+            <img src="assets/img/portfolio/benLobo2.jpg" alt="Personaje Ben Lobo, segunda vista" loading="lazy" />
+            <div class="card__info"><h3>Ben Lobo II</h3><span>Modelo 3D</span></div>
+          </article>
+
+          <!-- PROYECTO 5 — EJEMPLO DE VIDEOJUEGO (muy valorado por los estudios) -->
+          <article class="card reveal" data-category="game"
+            data-title="Nombre de tu juego"
+            data-desc="CAMBIAR: género, duración del desarrollo, tamaño del equipo y CUÁL FUE TU PAPEL."
+            data-tools="Unity · Krita · Premiere"
+            data-link="[tu-usuario.itch.io](https://TU-USUARIO.itch.io/TU-JUEGO)">
+            <!-- CAMBIAR: captura o portada de tu juego -->
+            <img src="assets/img/portfolio/juego1.jpg" alt="Captura del videojuego" loading="lazy" />
+            <div class="card__info"><h3>Nombre del juego</h3><span>Videojuego</span></div>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </section><!-- /Contact Section -->
+    <!-- ===== HABILIDADES ===== -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">03 · Habilidades</span>
+          <h2>Herramientas con las que trabajo</h2>
+        </div>
+        <!-- Niveles: "Avanzado", "Intermedio" o "Básico" (más profesional que los porcentajes) -->
+        <div class="skills">
+          <div class="skill-group reveal">
+            <h3>🎨 Diseño y 3D</h3>
+            <ul>
+              <li>Krita <em class="lvl lvl--3">Avanzado</em></li>
+              <li>Blender <em class="lvl lvl--2">Intermedio</em></li>
+              <li>3ds Max <em class="lvl lvl--2">Intermedio</em></li>
+              <li>Substance Painter <em class="lvl lvl--1">Básico</em></li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>🖼 Imagen</h3>
+            <ul>
+              <li>IbisPaint X <em class="lvl lvl--3">Avanzado</em></li>
+              <li>Illustrator <em class="lvl lvl--3">Avanzado</em></li>
+              <li>Photoshop <em class="lvl lvl--2">Intermedio</em></li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>🎬 Vídeo y sonido</h3>
+            <ul>
+              <li>Premiere Pro <em class="lvl lvl--3">Avanzado</em></li>
+              <li>After Effects <em class="lvl lvl--2">Intermedio</em></li>
+              <li>Shotcut <em class="lvl lvl--2">Intermedio</em></li>
+              <li>Canva <em class="lvl lvl--2">Intermedio</em></li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>🤝 Soft skills</h3>
+            <ul class="chips">
+              <li>Trabajo en equipo</li><li>Responsabilidad</li><li>Aprendizaje rápido</li>
+              <li>Comunicación</li><li>Gestión del tiempo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
+<!-- ===== TRAYECTORIA ===== -->
+<section class="section section--alt" id="trayectoria">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">04 · Trayectoria</span>
+      <h2>Formación y experiencia</h2>
+    </div>
+
+    <ol class="timeline">
+
+      <li class="reveal">
+        <span class="timeline__date">2021 — Actualidad</span>
+        <h3>Grado en Diseño y Desarrollo de Videojuegos</h3>
+        <p class="timeline__place">Universitat Jaume I · Castelló</p>
+        <p>
+          Formación especializada en el desarrollo de videojuegos, con interés
+          en arte 2D, modelado 3D, diseño visual, edición y creación de contenido digital.
+        </p>
+      </li>
+
+      <li class="reveal">
+        <span class="timeline__date">Varios años - Actualidad</span>
+        <h3>Creador de contenido digital</h3>
+        <p class="timeline__place">Proyectos personales · Online</p>
+        <p>
+          Creación de contenido de entretenimiento y arte digital, incluyendo
+          directos, AMVs, ilustraciones, edición de imágenes y diseño de pósters.
+        </p>
+      </li>
+
+      <li class="reveal">
+        <span class="timeline__date">Experiencia profesional</span>
+        <h3>Diseñador de logos</h3>
+        <p class="timeline__place">Proyecto para cuenta de preparación de oposiciones</p>
+        <p>
+          Diseño de identidad visual y creación de logos adaptados a las
+          necesidades del proyecto.
+        </p>
+      </li>
+
+      <li class="reveal">
+        <span class="timeline__date">11 años</span>
+        <h3>Músico profesional</h3>
+        <p class="timeline__place">Societat Unió Musical d’Alberic</p>
+        <p>
+          Experiencia musical profesional durante 11 años, desarrollando
+          disciplina, trabajo en equipo y experiencia en producción e interpretación sonora.
+        </p>
+      </li>
+
+      <li class="reveal">
+        <span class="timeline__date">Experiencia profesional</span>
+        <h3>Animador de eventos</h3>
+        <p class="timeline__place">TicTacEventos</p>
+        <p>
+          Participación en animación y producción de eventos, trabajando
+          directamente con público y equipos de organización.
+        </p>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="eyebrow">05 · Contacto</span>
+          <h2>¿Trabajamos juntos?</h2>
+<p>Busco una oportunidad para crecer como diseñador, aportar mis habilidades y formar parte de un equipo creativo. Si estás interesado en mi perfil, no dudes en contactarme.</p>          <ul class="contact__list">
+            <li><span>Correo</span><a href="mailto:josemariamca8@gmail.com">josemariamca8@gmail.com</a></li>
+            <li><span>Teléfono</span><a href="tel:+34661467670">+34 661 46 76 70</a></li>
+            <li><span>Ubicación</span><a href="[maps.app.goo.gl](https://maps.app.goo.gl/gRbMKjsN7EMovfXf7)" target="_blank" rel="noopener">Castelló de la Plana, España</a></li>
+          </ul>
+        </div>
+        <!--
+          CAMBIAR: crea un formulario gratis en [formspree.io](https://formspree.io)
+          y sustituye TU_ID por el código que te den.
+        -->
+        <form class="form reveal" action="[formspree.io](https://formspree.io/f/TU_ID)" method="POST">
+          <label>Nombre<input type="text" name="nombre" required /></label>
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Mensaje<textarea name="mensaje" rows="5" required></textarea></label>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> José María Martínez de la Casa Álvarez</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <!-- Ventana de detalle de proyecto (se rellena desde JS) -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__box">
+      <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+      <img id="modalImg" src="" alt="" />
+      <div class="modal__body">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <p class="modal__tools" id="modalTools"></p>
+        <a id="modalLink" class="btn btn--primary" target="_blank" rel="noopener">Ver proyecto ↗</a>
+      </div>
+    </div>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="js/main.js"></script>
 </body>
-
 </html>
