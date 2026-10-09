@@ -136,3 +136,27 @@ form.addEventListener('submit', async e => {
     status.textContent = 'Error de conexión. Escríbeme por correo.';
   }
 });
+
+// ===== Brillo que sigue al cursor =====
+const glow = document.querySelector('.cursor-glow');
+addEventListener('pointermove', e => {
+  glow.style.setProperty('--x', e.clientX + 'px');
+  glow.style.setProperty('--y', e.clientY + 'px');
+}, { passive: true });
+
+// ===== Inclinación 3D de las tarjetas =====
+if (matchMedia('(hover: hover)').matches) {
+  cards.forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.setProperty('--ry', x * 10 + 'deg');
+      card.style.setProperty('--rx', -y * 10 + 'deg');
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.setProperty('--rx', '0deg');
+      card.style.setProperty('--ry', '0deg');
+    });
+  });
+}
