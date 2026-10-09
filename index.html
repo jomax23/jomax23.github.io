@@ -2,12 +2,13 @@
 <html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>José María Martínez de la Casa | Game Artist & Diseñador de Videojuegos</title>
   <meta name="description" content="Portfolio de José María Martínez de la Casa Álvarez, diseñador y desarrollador de videojuegos. Arte digital, modelado 3D, edición de vídeo y sonido." />
   <meta name="author" content="José María Martínez de la Casa Álvarez" />
+  <meta name="theme-color" content="#07060d" />
 
-  <!-- Open Graph: cómo se ve tu web al compartirla en LinkedIn, WhatsApp, etc. -->
+  <!-- Open Graph -->
   <meta property="og:title" content="José María | Game Artist & Diseñador" />
   <meta property="og:description" content="Arte digital, modelado 3D y diseño de videojuegos." />
   <meta property="og:type" content="website" />
@@ -15,7 +16,6 @@
   <!-- CAMBIAR: imagen de vista previa (1200x630 px recomendado) -->
   <meta property="og:image" content="[jomax23.github.io](https://jomax23.github.io/assets/img/og-image.jpg)" />
 
-  <!-- CAMBIAR: tu favicon -->
   <link rel="icon" href="assets/img/profile/logo_transparente.png" />
 
   <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
@@ -29,13 +29,13 @@
   </div>
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
-  
+
   <a href="#main" class="skip-link">Saltar al contenido</a>
 
   <!-- ===== NAVEGACIÓN ===== -->
   <header class="header" id="header">
     <nav class="nav container" aria-label="Principal">
-      <a href="#inicio" class="logo"><img src="assets/img/profile/logo_transparente.png" alt=""><span></span></a>
+      <a href="#inicio" class="logo"><img src="assets/img/profile/logo_transparente.png" alt="Inicio"></a>
       <ul class="nav__links" id="navLinks">
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
@@ -57,65 +57,39 @@
         <div class="hero__text reveal">
           <span class="badge"><span class="dot"></span> Disponible para prácticas</span>
           <h1>Hola, soy <span class="gradient glitch" data-text="José María">José María</span></h1>
-          <p class="hero__role">Diseño y Desarrollo de Videojuegos · <span id="typed">Arte digital</span></p>
+          <p class="hero__role">Diseñador y Desarrollador de Videojuegos</p>
+          <!-- Texto que se escribe solo: línea propia con altura fija -->
+          <p class="hero__typed" aria-live="off"><span id="typed">Arte digital</span></p>
           <p class="hero__desc">
             Estudiante de último curso en la Universitat Jaume I, en búsqueda de una oportunidad laboral en el sector creativo. Busco seguir desarrollándome como diseñador, aportar mis conocimientos en arte 2D, modelado 3D, edición de vídeo y producción sonora, y demostrar mis habilidades trabajando en proyectos profesionales.
           </p>
           <div class="hero__cta">
             <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
-            <!-- CAMBIAR si renombras tu CV -->
             <a href="CV_JoseMaria_MartinezdelaCasaAlvarez.pdf" class="btn btn--ghost" download>Descargar CV ↓</a>
           </div>
           <ul class="socials">
-            <!-- CAMBIAR: pon tus perfiles reales (borra los que no uses) -->
-<li>
-  <a href="https://www.linkedin.com/in/josé-maría-martínez-de-la-casa-álvarez-b00559315"
-     target="_blank"
-     rel="noopener">
-    LinkedIn
-  </a>
-</li>
-
-<li>
-  <a href="https://www.youtube.com/@jomax23"
-     target="_blank"
-     rel="noopener">
-    YouTube
-  </a>
-</li>
-
-<li>
-  <a href="https://www.twitch.tv/jomax_23"
-     target="_blank"
-     rel="noopener">
-    Twitch
-  </a>
-</li>
-
-<li>
-  <a href="https://www.tiktok.com/@jomax23_designs?lang=es"
-     target="_blank"
-     rel="noopener">
-    TikTok
-  </a>
-</li>
-
-</ul>
+            <li><a href="[linkedin.com](https://www.linkedin.com/in/josé-maría-martínez-de-la-casa-álvarez-b00559315)" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="[youtube.com](https://www.youtube.com/@jomax23)" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="[twitch.tv](https://www.twitch.tv/jomax_23)" target="_blank" rel="noopener">Twitch</a></li>
+            <li><a href="[tiktok.com](https://www.tiktok.com/@jomax23_designs?lang=es)" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
         </div>
         <div class="hero__img reveal">
-          <!-- CAMBIAR: tu foto de perfil (cuadrada, mínimo 600x600 px) -->
           <img src="assets/img/profile2.jpg" alt="Foto de José María Martínez de la Casa" width="420" height="420" />
         </div>
       </div>
       <a href="#sobre-mi" class="scroll-hint" aria-label="Bajar">↓</a>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Arte digital ✦ Modelado 3D ✦ Edición de vídeo ✦ Producción sonora ✦ Game Design ✦ </span>
-        <span>Arte digital ✦ Modelado 3D ✦ Edición de vídeo ✦ Producción sonora ✦ Game Design ✦ </span>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Arte digital ✦ Modelado 3D ✦ Edición de vídeo ✦ Producción sonora ✦ Game Design ✦ </span>
+          <span>Arte digital ✦ Modelado 3D ✦ Edición de vídeo ✦ Producción sonora ✦ Game Design ✦ </span>
+        </div>
       </div>
     </div>
+
     <!-- ===== SOBRE MÍ ===== -->
     <section class="section" id="sobre-mi">
       <div class="container about">
@@ -135,7 +109,6 @@
             </ul>
           </div>
           <div class="stats reveal">
-            <!-- CAMBIAR: actualiza tus cifras -->
             <div class="stat"><strong data-count="30">0</strong><span>Proyectos completados</span></div>
             <div class="stat"><strong data-count="11">0</strong><span>Herramientas dominadas</span></div>
             <div class="stat"><strong data-count="5">0</strong><span>Años formándome</span></div>
@@ -153,7 +126,6 @@
           <p>Haz clic en cualquier proyecto para ver los detalles.</p>
         </div>
 
-        <!-- Los data-filter deben coincidir con el data-category de cada tarjeta -->
         <div class="filters reveal" role="tablist">
           <button class="filter active" data-filter="all">Todos</button>
           <button class="filter" data-filter="3d">Modelos 3D</button>
@@ -164,19 +136,16 @@
         <div class="projects" id="projects">
           <!--
             ===== PLANTILLA DE PROYECTO =====
-            Para añadir un proyecto, copia un <article> completo y cambia:
+            Copia un <article> completo y cambia:
               - data-category  → 3d | 2d | game
-              - data-title, data-desc, data-tools, data-link → lo que sale en la ventana de detalle
-              - src y alt de la <img> → TU IMAGEN (recomendado 1200x900 px, .webp o .jpg)
+              - data-title, data-desc, data-tools, data-link
+              - src y alt de la <img>
           -->
 
-          <!-- PROYECTO 1 — CAMBIAR imagen, título y descripción -->
           <article class="card reveal" data-category="2d"
             data-title="Axel Blaze – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/AxelBlazeWP.jpg" alt="Wallpaper de Axel Blaze" loading="lazy" />
             <div class="card__info"><h3>Axel Blaze</h3><span>Ilustración 2D</span></div>
           </article>
@@ -184,19 +153,15 @@
           <article class="card reveal" data-category="2d"
             data-title="Gear 5 Luffy – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/Gear5_Luffy.png" alt="Wallpaper de Gear 5 Luffy" loading="lazy" />
             <div class="card__info"><h3>Gear 5 Luffy</h3><span>Ilustración 2D</span></div>
           </article>
-          
+
           <article class="card reveal" data-category="2d"
             data-title="Goku Black Rose – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/Goku_Black_Rose.png" alt="Wallpaper de Goku Black Rose" loading="lazy" />
             <div class="card__info"><h3>Goku Black Rose</h3><span>Ilustración 2D</span></div>
           </article>
@@ -204,9 +169,7 @@
           <article class="card reveal" data-category="2d"
             data-title="Mark Minimalista – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/markMinimalista.jpg" alt="Wallpaper de Mark Minimalista" loading="lazy" />
             <div class="card__info"><h3>Mark Minimalista</h3><span>Ilustración 2D</span></div>
           </article>
@@ -214,9 +177,7 @@
           <article class="card reveal" data-category="2d"
             data-title="Sully Minimalista – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/sullyMinimalista2.jpg" alt="Wallpaper de Sully Minimalista" loading="lazy" />
             <div class="card__info"><h3>Sully Minimalista</h3><span>Ilustración 2D</span></div>
           </article>
@@ -224,9 +185,7 @@
           <article class="card reveal" data-category="2d"
             data-title="Shawn Froste – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/ShawnFrosteWP.jpg" alt="Wallpaper de Shawn Froste" loading="lazy" />
             <div class="card__info"><h3>Shawn Froste</h3><span>Ilustración 2D</span></div>
           </article>
@@ -234,9 +193,7 @@
           <article class="card reveal" data-category="2d"
             data-title="Yuji Itadori – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/Yuji_Itadori.png" alt="Wallpaper de Yuji Itadori" loading="lazy" />
             <div class="card__info"><h3>Yuji Itadori</h3><span>Ilustración 2D</span></div>
           </article>
@@ -244,20 +201,15 @@
           <article class="card reveal" data-category="2d"
             data-title="Rath – Wallpaper"
             data-desc="Ilustración digital tipo fondo de pantalla."
-            data-tools="Krita · Photoshop"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Krita · Photoshop" data-link="">
             <img src="assets/img/portfolio/Rath.png" alt="Wallpaper de Rath" loading="lazy" />
             <div class="card__info"><h3>Rath</h3><span>Ilustración 2D</span></div>
           </article>
 
-          <!-- PROYECTO 2 -->
           <article class="card reveal" data-category="3d"
             data-title="Espada de Tanjiro"
             data-desc="Modelado y texturizado de un arma."
-            data-tools="Blender · Substance Painter"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Blender · Substance Painter" data-link="">
             <img src="assets/img/portfolio/espadaTanjiro2.png" alt="Modelo 3D de espada" loading="lazy" />
             <div class="card__info"><h3>Espada de Tanjiro</h3><span>Modelo 3D</span></div>
           </article>
@@ -265,9 +217,7 @@
           <article class="card reveal" data-category="3d"
             data-title="Modelo 3D de habitación"
             data-desc="Modelado y texturizado de una habitación."
-            data-tools="Blender · Substance Painter"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Blender · Substance Painter" data-link="">
             <img src="assets/img/portfolio/habCast3.png" alt="Modelo 3D de habitación" loading="lazy" />
             <div class="card__info"><h3>Modelo 3D de habitación</h3><span>Modelo 3D</span></div>
           </article>
@@ -275,9 +225,7 @@
           <article class="card reveal" data-category="3d"
             data-title="Modelo 3D de habitación"
             data-desc="Modelado y texturizado de una habitación."
-            data-tools="Blender · Substance Painter"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Blender · Substance Painter" data-link="">
             <img src="assets/img/portfolio/habitacionCastello3.jpg" alt="Modelo 3D de habitación" loading="lazy" />
             <div class="card__info"><h3>Modelo 3D de habitación</h3><span>Modelo 3D</span></div>
           </article>
@@ -285,9 +233,7 @@
           <article class="card reveal" data-category="3d"
             data-title="Bote de colonia"
             data-desc="Modelado y texturizado de un bote de colonia."
-            data-tools="Blender · Substance Painter"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Blender · Substance Painter" data-link="">
             <img src="assets/img/portfolio/boteColonia.jpg" alt="Modelo 3D de bote de colonia" loading="lazy" />
             <div class="card__info"><h3>Bote de colonia</h3><span>Modelo 3D</span></div>
           </article>
@@ -295,47 +241,33 @@
           <article class="card reveal" data-category="3d"
             data-title="Sombrero de Luffy"
             data-desc="Modelado y texturizado del sombrero de Luffy."
-            data-tools="Blender · Substance Painter"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Blender · Substance Painter" data-link="">
             <img src="assets/img/portfolio/sombreroLuffy2.png" alt="Modelo 3D del sombrero de Luffy" loading="lazy" />
             <div class="card__info"><h3>Sombrero de Luffy</h3><span>Modelo 3D</span></div>
           </article>
 
-          <!-- PROYECTO 3 -->
           <article class="card reveal" data-category="3d"
             data-title="Ben Lobo"
             data-desc="Modelado de personaje."
-            data-tools="Blender · 3ds Max"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Blender · 3ds Max" data-link="">
             <img src="assets/img/portfolio/benLobo1.jpg" alt="Personaje Ben Lobo" loading="lazy" />
             <div class="card__info"><h3>Ben Lobo</h3><span>Modelo 3D</span></div>
           </article>
 
-          <!-- PROYECTO 4 -->
           <article class="card reveal" data-category="3d"
             data-title="Ben Lobo – Vista 2"
             data-desc="CAMBIAR: descripción."
-            data-tools="Blender"
-            data-link="">
-            <!-- CAMBIAR: imagen del proyecto -->
+            data-tools="Blender" data-link="">
             <img src="assets/img/portfolio/benLobo2.jpg" alt="Personaje Ben Lobo, segunda vista" loading="lazy" />
             <div class="card__info"><h3>Ben Lobo II</h3><span>Modelo 3D</span></div>
           </article>
 
-          <!-- ===== PROYECTO 5 — EJEMPLO DE VIDEOJUEGO ===== -->
           <article class="card reveal" data-category="game"
             data-title="Objetos Low Poly para Videojuegos"
             data-desc="Creación de una colección de objetos y elementos de entorno con estética low poly, diseñados para su integración en videojuegos."
             data-tools="Blender"
-            data-link="https://skfb.ly/pOKM9">
-
-            <!-- CAMBIAR: captura o render del proyecto -->
-            <img src="assets/img/portfolio/renderLowPolyObjects.png"
-                 alt="Colección de objetos low poly para videojuegos"
-                 loading="lazy" />
-
+            data-link="[skfb.ly](https://skfb.ly/pOKM9)">
+            <img src="assets/img/portfolio/renderLowPolyObjects.png" alt="Colección de objetos low poly para videojuegos" loading="lazy" />
             <div class="card__info">
               <h3>Objetos Low Poly para Videojuegos</h3>
               <span>Modelado 3D · Game Assets</span>
@@ -352,7 +284,6 @@
           <span class="eyebrow">03 · Habilidades</span>
           <h2>Herramientas con las que trabajo</h2>
         </div>
-        <!-- Niveles: "Avanzado", "Intermedio" o "Básico" (más profesional que los porcentajes) -->
         <div class="skills">
           <div class="skill-group reveal">
             <h3>🎨 Diseño y 3D</h3>
@@ -391,69 +322,48 @@
       </div>
     </section>
 
-<!-- ===== TRAYECTORIA ===== -->
-<section class="section section--alt" id="trayectoria">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="eyebrow">04 · Trayectoria</span>
-      <h2>Formación y experiencia</h2>
-    </div>
+    <!-- ===== TRAYECTORIA ===== -->
+    <section class="section section--alt" id="trayectoria">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">04 · Trayectoria</span>
+          <h2>Formación y experiencia</h2>
+        </div>
 
-    <ol class="timeline">
-
-      <li class="reveal">
-        <span class="timeline__date">2021 — Actualidad</span>
-        <h3>Grado en Diseño y Desarrollo de Videojuegos</h3>
-        <p class="timeline__place">Universitat Jaume I · Castelló</p>
-        <p>
-          Formación especializada en el desarrollo de videojuegos, con interés
-          en arte 2D, modelado 3D, diseño visual, edición y creación de contenido digital.
-        </p>
-      </li>
-
-      <li class="reveal">
-        <span class="timeline__date">Varios años - Actualidad</span>
-        <h3>Creador de contenido digital</h3>
-        <p class="timeline__place">Proyectos personales · Online</p>
-        <p>
-          Creación de contenido de entretenimiento y arte digital, incluyendo
-          directos, AMVs, ilustraciones, edición de imágenes y diseño de pósters.
-        </p>
-      </li>
-
-      <li class="reveal">
-        <span class="timeline__date">Experiencia profesional</span>
-        <h3>Diseñador de logos</h3>
-        <p class="timeline__place">Proyecto para cuenta de preparación de oposiciones</p>
-        <p>
-          Diseño de identidad visual y creación de logos adaptados a las
-          necesidades del proyecto.
-        </p>
-      </li>
-
-      <li class="reveal">
-        <span class="timeline__date">11 años</span>
-        <h3>Músico profesional</h3>
-        <p class="timeline__place">Societat Unió Musical d’Alberic</p>
-        <p>
-          Experiencia musical profesional durante 11 años, desarrollando
-          disciplina, trabajo en equipo y experiencia en producción e interpretación sonora.
-        </p>
-      </li>
-
-      <li class="reveal">
-        <span class="timeline__date">Experiencia profesional</span>
-        <h3>Animador de eventos</h3>
-        <p class="timeline__place">TicTacEventos</p>
-        <p>
-          Participación en animación y producción de eventos, trabajando
-          directamente con público y equipos de organización.
-        </p>
-      </li>
-
-    </ol>
-  </div>
-</section>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="timeline__date">2021 — Actualidad</span>
+            <h3>Grado en Diseño y Desarrollo de Videojuegos</h3>
+            <p class="timeline__place">Universitat Jaume I · Castelló</p>
+            <p>Formación especializada en el desarrollo de videojuegos, con interés en arte 2D, modelado 3D, diseño visual, edición y creación de contenido digital.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__date">Varios años - Actualidad</span>
+            <h3>Creador de contenido digital</h3>
+            <p class="timeline__place">Proyectos personales · Online</p>
+            <p>Creación de contenido de entretenimiento y arte digital, incluyendo directos, AMVs, ilustraciones, edición de imágenes y diseño de pósters.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__date">Experiencia profesional</span>
+            <h3>Diseñador de logos</h3>
+            <p class="timeline__place">Proyecto para cuenta de preparación de oposiciones</p>
+            <p>Diseño de identidad visual y creación de logos adaptados a las necesidades del proyecto.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__date">11 años</span>
+            <h3>Músico profesional</h3>
+            <p class="timeline__place">Societat Unió Musical d’Alberic</p>
+            <p>Experiencia musical profesional durante 11 años, desarrollando disciplina, trabajo en equipo y experiencia en producción e interpretación sonora.</p>
+          </li>
+          <li class="reveal">
+            <span class="timeline__date">Experiencia profesional</span>
+            <h3>Animador de eventos</h3>
+            <p class="timeline__place">TicTacEventos</p>
+            <p>Participación en animación y producción de eventos, trabajando directamente con público y equipos de organización.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
     <!-- ===== CONTACTO ===== -->
     <section class="section" id="contacto">
@@ -461,16 +371,14 @@
         <div class="contact__info reveal">
           <span class="eyebrow">05 · Contacto</span>
           <h2>¿Trabajamos juntos?</h2>
-<p>Busco una oportunidad para crecer como diseñador, aportar mis habilidades y formar parte de un equipo creativo. Si estás interesado en mi perfil, no dudes en contactarme.</p>          <ul class="contact__list">
+          <p>Busco una oportunidad para crecer como diseñador, aportar mis habilidades y formar parte de un equipo creativo. Si estás interesado en mi perfil, no dudes en contactarme.</p>
+          <ul class="contact__list">
             <li><span>Correo</span><a href="mailto:josemariamca8@gmail.com">josemariamca8@gmail.com</a></li>
             <li><span>Teléfono</span><a href="tel:+34661467670">+34 661 46 76 70</a></li>
             <li><span>Ubicación</span><a href="[maps.app.goo.gl](https://maps.app.goo.gl/gRbMKjsN7EMovfXf7)" target="_blank" rel="noopener">Castelló de la Plana, España</a></li>
           </ul>
         </div>
-        <!--
-          CAMBIAR: crea un formulario gratis en [formspree.io](https://formspree.io)
-          y sustituye TU_ID por el código que te den.
-        -->
+        <!-- CAMBIAR: crea un formulario gratis en formspree.io y sustituye TU_ID -->
         <form class="form reveal" action="[formspree.io](https://formspree.io/f/TU_ID)" method="POST">
           <label>Nombre<input type="text" name="nombre" required /></label>
           <label>Email<input type="email" name="email" required /></label>
@@ -489,11 +397,11 @@
     </div>
   </footer>
 
-  <!-- Ventana de detalle de proyecto (se rellena desde JS) -->
+  <!-- Ventana de detalle de proyecto -->
   <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal__box">
       <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
-      <img id="modalImg" src="" alt="" />
+      <div class="modal__media"><img id="modalImg" src="" alt="" /></div>
       <div class="modal__body">
         <h3 id="modalTitle"></h3>
         <p id="modalDesc"></p>
