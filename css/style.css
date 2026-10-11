@@ -44,7 +44,6 @@ main, .footer, .header { position:relative; z-index:2; }
 @keyframes flow { to { background-position:300% 0; } }
 
 /* ===== FONDO ARTÍSTICO ===== */
-/* Altura fija (lvh): no cambia cuando la barra del navegador móvil aparece/desaparece */
 .bg-art { position:fixed; top:0; left:0; width:100%; height:100vh; height:100lvh; z-index:0; overflow:hidden; pointer-events:none; contain:strict; }
 .blob { position:absolute; width:46vmax; aspect-ratio:1; filter:blur(70px); opacity:.45; will-change:transform;
   border-radius:42% 58% 63% 37% / 41% 44% 56% 59%; animation:morph 18s ease-in-out infinite alternate; }
@@ -55,7 +54,6 @@ main, .footer, .header { position:relative; z-index:2; }
   50%  { border-radius:63% 37% 38% 62% / 55% 63% 37% 45%; transform:translate(6vmax,4vmax) rotate(60deg) scale(1.1); }
   100% { border-radius:37% 63% 51% 49% / 37% 35% 65% 63%; transform:translate(-4vmax,6vmax) rotate(140deg); }
 }
-/* Versión ligera para móvil: solo transform (va por GPU, sin recalcular formas) */
 @keyframes drift {
   50%  { transform:translate3d(30px,20px,0) scale(1.08); }
   100% { transform:translate3d(-20px,30px,0) scale(1); }
@@ -84,6 +82,9 @@ main, .footer, .header { position:relative; z-index:2; }
 .btn--ghost:hover { background:var(--accent-2); color:var(--bg); }
 .icon-btn { background:var(--card); border:1px solid var(--border); color:var(--text); width:42px; height:42px; border-radius:50%; cursor:pointer; font-size:1.1rem; transition:.25s; flex-shrink:0; }
 .icon-btn:hover { border-color:var(--accent-3); box-shadow:0 0 14px var(--accent-3); }
+/* Botón de idioma */
+.lang-btn { font-family:'Orbitron',sans-serif; font-size:.75rem; font-weight:700; letter-spacing:.05em; }
+.lang-btn:hover { border-color:var(--accent-2); box-shadow:0 0 14px var(--accent-2); }
 
 /* ===== HEADER ===== */
 .header { position:fixed; inset:0 0 auto; z-index:100; transition:background .3s,box-shadow .3s; }
@@ -124,7 +125,6 @@ main, .footer, .header { position:relative; z-index:2; }
 }
 
 .hero__role { font-size:1.2rem; color:var(--muted); }
-/* Línea propia con altura fija: lo que se escribe no mueve nada */
 .hero__typed { height:2.2rem; line-height:2.2rem; margin-top:.4rem; white-space:nowrap; overflow:hidden; }
 #typed { display:inline-block; vertical-align:top; font-family:'Permanent Marker',cursive; font-size:clamp(1.35rem,4.5vw,1.65rem);
   color:var(--accent-2); text-shadow:var(--glow-2); border-right:3px solid var(--accent-3); padding-right:4px;
@@ -152,7 +152,6 @@ main, .footer, .header { position:relative; z-index:2; }
 @keyframes bob { 50%{transform:translateY(8px)} }
 
 /* ===== MARQUEE ===== */
-/* El contenedor recorta lo que sobresale al girar: así no aparece scroll lateral */
 .marquee-wrap { position:relative; z-index:2; overflow:hidden; padding:1.5rem 0; }
 .marquee { overflow:hidden; padding:1.1rem 0; transform:rotate(-2deg) scale(1.05);
   background:linear-gradient(90deg,var(--accent),var(--accent-3),var(--accent-2)); box-shadow:0 0 40px -5px var(--accent-3); }
@@ -190,7 +189,6 @@ main, .footer, .header { position:relative; z-index:2; }
 .stat:nth-child(2) { transform:rotate(1.5deg) translateX(14px); }
 .stat:nth-child(3) { transform:rotate(-1deg); }
 .stat:hover { transform:rotate(0) scale(1.04); box-shadow:0 0 30px -5px var(--accent-3); }
-/* Números con ancho fijo: el contador no cambia el tamaño de la caja */
 .stat strong { font-family:'Syne'; font-size:3.2rem; display:block; line-height:1; color:var(--text); text-shadow:var(--glow); font-variant-numeric:tabular-nums; white-space:nowrap; }
 .stat strong::after { content:'+'; color:var(--accent-3); }
 .stat span { color:var(--muted); }
@@ -277,10 +275,11 @@ main, .footer, .header { position:relative; z-index:2; }
   border:2px solid transparent;
   background:linear-gradient(var(--card),var(--card)) padding-box, linear-gradient(135deg,var(--accent),var(--accent-3),var(--accent-2)) border-box;
   box-shadow:0 0 50px -15px var(--accent-3); }
-.form::before { content:'¡Escríbeme!'; position:absolute; top:-1.1rem; left:1.5rem; font-family:'Permanent Marker',cursive; font-size:1.1rem;
+/* La etiqueta se lee de data-label para poder traducirla */
+.form::before { content:attr(data-label); position:absolute; top:-1.1rem; left:1.5rem; font-family:'Permanent Marker',cursive; font-size:1.1rem;
   padding:.2rem .9rem; background:var(--accent-3); color:#fff; border-radius:6px; transform:rotate(-4deg); box-shadow:0 0 16px var(--accent-3); }
 .form label { display:grid; gap:.4rem; font-size:.9rem; color:var(--muted); font-weight:600; }
-/* 16px en inputs: evita que el iPhone haga zoom al tocarlos */
+.form label > span { display:block; }
 .form input,.form textarea { background:var(--bg); border:1px solid var(--border); color:var(--text); border-radius:10px; padding:.85rem 1rem; font:inherit; font-size:16px; resize:vertical; transition:.25s; width:100%; }
 .form input:focus,.form textarea:focus { outline:none; border-color:var(--accent-2); box-shadow:0 0 0 3px color-mix(in srgb,var(--accent-2) 20%,transparent), 0 0 16px -4px var(--accent-2); }
 .form__status { font-size:.9rem; color:var(--accent-2); min-height:1.4em; }
@@ -317,7 +316,7 @@ main, .footer, .header { position:relative; z-index:2; }
 .reveal.visible { opacity:1; translate:0 0; }
 @media (prefers-reduced-motion:reduce) { *{animation:none!important;transition:none!important} .reveal{opacity:1;translate:none} .cursor-glow{display:none} }
 
-/* ===== DISPOSITIVOS TÁCTILES: sin efectos de hover que descuadren ===== */
+/* ===== DISPOSITIVOS TÁCTILES ===== */
 @media (hover:none) {
   .cursor-glow { display:none; }
   .card:hover, .card:active { --rot:inherit; }
@@ -340,7 +339,6 @@ main, .footer, .header { position:relative; z-index:2; }
   .stat:nth-child(2) { transform:rotate(1.5deg); }
 }
 @media (max-width:768px) {
-  /* Fondo ligero y estable en móvil */
   .blob { width:520px; filter:blur(50px); border-radius:50%; animation:drift 20s ease-in-out infinite alternate; }
   .b1 { top:-180px; left:-200px; }
   .b2 { bottom:-200px; right:-220px; top:auto; }
@@ -370,10 +368,7 @@ main, .footer, .header { position:relative; z-index:2; }
   .modal__body h3 { font-size:1.35rem; padding-right:2.5rem; }
 }
 
-
-
 /* ===== TIPOGRAFÍA FUTURISTA Y EFECTO NEÓN ===== */
-
 .hero__role,
 .hero__typed,
 .eyebrow,
@@ -382,14 +377,12 @@ main, .footer, .header { position:relative; z-index:2; }
   font-family: 'Exo 2', sans-serif;
 }
 
-/* Neón en el nombre principal */
 .hero h1 .gradient {
   filter:
     drop-shadow(0 0 5px rgba(167, 139, 250, 0.8))
     drop-shadow(0 0 15px rgba(167, 139, 250, 0.45));
 }
 
-/* Neón cian en el texto animado */
 #typed {
   font-family: 'Orbitron', sans-serif;
   color: #55D6FF;
@@ -399,14 +392,12 @@ main, .footer, .header { position:relative; z-index:2; }
     0 0 25px rgba(85, 214, 255, 0.45);
 }
 
-/* Títulos de sección */
 .section__head h2,
 .contact h2 {
   text-shadow:
     0 0 8px rgba(167, 139, 250, 0.35);
 }
 
-/* Brillo al pasar el cursor por los títulos */
 .section__head h2:hover,
 .contact h2:hover {
   text-shadow:
