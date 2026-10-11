@@ -82,9 +82,12 @@ main, .footer, .header { position:relative; z-index:2; }
 .btn--ghost:hover { background:var(--accent-2); color:var(--bg); }
 .icon-btn { background:var(--card); border:1px solid var(--border); color:var(--text); width:42px; height:42px; border-radius:50%; cursor:pointer; font-size:1.1rem; transition:.25s; flex-shrink:0; }
 .icon-btn:hover { border-color:var(--accent-3); box-shadow:0 0 14px var(--accent-3); }
-/* Botón de idioma */
-.lang-btn { font-family:'Orbitron',sans-serif; font-size:.75rem; font-weight:700; letter-spacing:.05em; }
+/* Botón de idioma (bandera) */
+.lang-btn { padding:0; overflow:hidden; display:grid; place-items:center; }
+.lang-btn svg { width:100%; height:100%; display:block; border-radius:50%; transition:transform .3s var(--ease); }
 .lang-btn:hover { border-color:var(--accent-2); box-shadow:0 0 14px var(--accent-2); }
+.lang-btn:hover svg { transform:scale(1.12); }
+
 
 /* ===== HEADER ===== */
 .header { position:fixed; inset:0 0 auto; z-index:100; transition:background .3s,box-shadow .3s; }

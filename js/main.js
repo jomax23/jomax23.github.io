@@ -254,6 +254,23 @@ const langBtn = document.getElementById('langToggle');
 const form = document.querySelector('.form');
 const metaDesc = document.querySelector('meta[name="description"]');
 
+// ===== Banderas del botón de idioma =====
+const FLAGS = {
+  es: `<svg viewBox="0 0 750 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+         <rect width="750" height="500" fill="#AA151B"/>
+         <rect y="125" width="750" height="250" fill="#F1BF00"/>
+       </svg>`,
+  en: `<svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+         <clipPath id="ukClip"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath>
+         <path d="M0,0v30h60v-30z" fill="#012169"/>
+         <path d="M0,0 60,30M60,0 0,30" stroke="#fff" stroke-width="6"/>
+         <path d="M0,0 60,30M60,0 0,30" clip-path="url(#ukClip)" stroke="#C8102E" stroke-width="4"/>
+         <path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/>
+         <path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/>
+       </svg>`
+};
+
+
 function applyLang(newLang) {
   lang = newLang;
   localStorage.setItem('lang', lang);
@@ -279,8 +296,9 @@ function applyLang(newLang) {
   // Etiqueta "¡Escríbeme!" del formulario (CSS la lee de data-label)
   form.dataset.label = t('form.label');
 
-  // El botón muestra el idioma al que vas a cambiar
-  langBtn.textContent = lang === 'es' ? 'ES' : 'EN';
+  // Muestra la bandera del idioma actual
+  langBtn.innerHTML = FLAGS[lang];
+  langBtn.title = t('aria.lang');
 
   // aria del menú según esté abierto o cerrado
   burger.setAttribute('aria-label',
