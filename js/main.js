@@ -6,7 +6,10 @@ const root = document.documentElement;
 
 // =====================================================================
 // ===== TRADUCCIONES (CAMBIAR aquí cualquier texto de la web) =====
+// Idiomas: es (español) · va (valencià) · en (English)
 // =====================================================================
+const LANGS = ['es', 'va', 'en'];
+
 const I18N = {
   es: {
     'meta.title': 'José María Martínez de la Casa | Game Artist & Diseñador de Videojuegos',
@@ -44,6 +47,7 @@ const I18N = {
     'about.edu': '<span>Educación</span>Grado en Diseño y Desarrollo de Videojuegos · Universitat Jaume I',
     'about.lang': '<span>Idiomas</span>Español, Valenciano, Inglés',
     'about.loc': 'Ubicación',
+    'country': 'España',
 
     'stats.projects': 'Proyectos completados',
     'stats.tools': 'Herramientas de trabajo',
@@ -124,6 +128,124 @@ const I18N = {
     'modal.link': 'Ver proyecto ↗'
   },
 
+  // ===================== VALENCIÀ =====================
+  va: {
+    'meta.title': 'José María Martínez de la Casa | Game Artist i Dissenyador de Videojocs',
+    'meta.desc': 'Portfolio de José María Martínez de la Casa Álvarez, dissenyador i desenvolupador de videojocs. Art digital, modelatge 3D, edició de vídeo i so.',
+    'skip': 'Saltar al contingut',
+
+    'nav.about': 'Sobre mi',
+    'nav.projects': 'Projectes',
+    'nav.skills': 'Habilitats',
+    'nav.path': 'Trajectòria',
+    'nav.contact': 'Contacte',
+
+    'aria.lang': "Canviar d'idioma",
+    'aria.theme': 'Canviar de tema',
+    'aria.menu': 'Obrir el menú',
+    'aria.menuClose': 'Tancar el menú',
+    'aria.down': 'Baixar',
+    'aria.close': 'Tancar',
+
+    'hero.badge': 'Disponible per a oportunitats professionals',
+    'hero.hello': 'Hola, sóc',
+    'hero.role': 'Dissenyador i Desenvolupador de Videojocs',
+    'hero.desc': "Dissenyador i desenvolupador de videojocs amb formació a la Universitat Jaume I i experiència en projectes de desenvolupament amb Unity, disseny visual i creació de contingut digital. El meu treball abasta l'art 2D, el modelatge 3D, l'edició de vídeo i la producció sonora. Combine creativitat i coneixements tècnics per a desenvolupar projectes visuals i multimèdia, amb un enfocament orientat a la qualitat i als objectius de cada projecte.",
+    'hero.ctaProjects': 'Veure projectes',
+    'hero.ctaCv': 'Descarregar CV ↓',
+    'hero.photoAlt': 'Foto de José María Martínez de la Casa',
+    'typed': ['Art digital', 'Modelatge 3D', 'Edició de vídeo', 'Producció sonora', 'Disseny de videojocs'],
+    'marquee': 'Art digital ✦ Modelatge 3D ✦ Edició de vídeo ✦ Producció sonora ✦ Game Design ✦ ',
+
+    'about.eyebrow': '01 · Sobre mi',
+    'about.title': 'Disseny, creativitat i tecnologia',
+    'about.p1': "El meu treball combina <strong>disseny visual</strong>, <strong>art digital</strong> i <strong>eines de creació multimèdia</strong>. La meua formació en Disseny i Desenvolupament de Videojocs m'ha permés desenvolupar competències en art 2D, modelatge 3D i creació de continguts digitals, aplicables tant al desenvolupament de videojocs com a altres projectes creatius.",
+    'about.p2': "També tinc experiència en edició d'imatge i vídeo, producció sonora, creació musical i disseny de logotips. Em caracteritze per la responsabilitat, la capacitat d'adaptació i l'atenció al detall, qualitats que aplique en cada projecte per a aconseguir resultats de qualitat.",
+    'about.spec': '<span>Especialització</span>Art digital, modelatge 3D, edició audiovisual i producció sonora',
+    'about.edu': '<span>Educació</span>Grau en Disseny i Desenvolupament de Videojocs · Universitat Jaume I',
+    'about.lang': '<span>Idiomes</span>Espanyol, Valencià, Anglés',
+    'about.loc': 'Ubicació',
+    'country': 'Espanya',
+
+    'stats.projects': 'Projectes completats',
+    'stats.tools': 'Eines de treball',
+    'stats.years': 'Anys de formació',
+
+    'projects.eyebrow': '02 · Projectes',
+    'projects.title': 'Treballs seleccionats',
+    'projects.hint': "Una selecció de projectes de disseny, art digital i modelatge 3D que reflecteix les meues competències tècniques i creatives. Fes clic en qualsevol projecte per a veure'n els detalls.",
+    'filter.all': 'Tots',
+    'filter.3d': 'Models 3D',
+    'filter.2d': 'Il·lustració / Fons',
+    'filter.game': 'Videojocs',
+
+    'card.2d': 'Il·lustració 2D',
+    'card.3d': 'Model 3D',
+    'card.mark': 'Mark Minimalista',
+    'card.sully': 'Sully Minimalista',
+    'card.sword': 'Espasa de Tanjiro',
+    'card.room': "Model 3D d'habitació",
+    'card.cologne': 'Pot de colònia',
+    'card.hat': 'Barret de Luffy',
+    'card.ben': 'Ben Llop',
+    'card.ben2': 'Ben Llop II',
+    'card.lowpoly': 'Objectes Low Poly per a Videojocs',
+    'card.gameAssets': 'Modelatge 3D · Game Assets',
+
+    'skills.eyebrow': '03 · Habilitats',
+    'skills.title': 'Eines i competències',
+    'skills.g1': '🎨 Disseny i 3D',
+    'skills.g2': '📸 Imatge',
+    'skills.g3': '🎬 Vídeo i so',
+    'skills.g4': '🤝 Habilitats',
+    'lvl.adv': 'Avançat',
+    'lvl.int': 'Intermedi',
+    'lvl.basic': 'Bàsic',
+    'soft.team': 'Treball en equip',
+    'soft.resp': 'Responsabilitat',
+    'soft.learn': "Capacitat d'adaptació",
+    'soft.comm': 'Comunicació',
+    'soft.time': 'Gestió del temps',
+
+    'path.eyebrow': '04 · Trajectòria',
+    'path.title': 'Formació i experiència professional',
+    't.pro': 'Experiència professional',
+    't1.date': '2021 — Actualitat',
+    't1.title': 'Grau en Disseny i Desenvolupament de Videojocs',
+    't1.desc': 'Formació especialitzada en desenvolupament de videojocs, disseny visual, art 2D, modelatge 3D i creació de contingut digital.',
+    't2.date': 'Diversos anys - Actualitat',
+    't2.title': 'Creador de contingut digital',
+    't2.place': 'Projectes personals · En línia',
+    't2.desc': "Creació i edició de contingut audiovisual i artístic per a plataformes digitals, incloent-hi directes, AMV, il·lustracions, edició d'imatges i disseny de pòsters.",
+    't3.title': 'Disseny de logotips',
+    't3.place': 'Projecte per a client',
+    't3.desc': "Disseny de logotips i identitat visual per a un projecte relacionat amb la preparació d'oposicions, adaptant les propostes gràfiques a les seues necessitats i objectius de comunicació.",
+    't4.date': '11 anys',
+    't4.title': 'Músic professional',
+    't4.desc': "Dotze anys d'experiència com a músic professional, desenvolupant competències d'interpretació musical, disciplina, coordinació i treball en equip.",
+    't5.title': "Animació d'esdeveniments",
+    't5.desc': "Participació en activitats d'animació i entreteniment en esdeveniments, contribuint al desenvolupament de les activitats i a l'atenció del públic.",
+
+    'contact.eyebrow': '05 · Contacte',
+    'contact.title': 'Parlem del teu pròxim projecte?',
+    'contact.desc': 'Estic obert a col·laborar en projectes de disseny, desenvolupament de videojocs i creació de contingut digital en què puga aportar els meus coneixements tècnics i creatius. Si busques un perfil multidisciplinari per al teu equip o projecte, pots posar-te en contacte amb mi.',
+    'contact.mail': 'Correu',
+    'contact.phone': 'Telèfon',
+
+    'form.label': 'Escriu-me!',
+    'form.name': 'Nom',
+    'form.email': 'Correu electrònic',
+    'form.msg': 'Missatge',
+    'form.send': 'Enviar missatge',
+    'form.sending': 'Enviant...',
+    'form.ok': 'Gràcies per contactar amb mi. Et respondré tan prompte com puga.',
+    'form.error': "Error en l'enviament. Escriu-me per correu.",
+    'form.netError': "No s'ha pogut enviar el missatge. Pots contactar amb mi directament per correu electrònic.",
+
+    'footer.top': 'Tornar a dalt ↑',
+    'modal.link': 'Veure projecte ↗'
+  },
+
   en: {
     'meta.title': 'José María Martínez de la Casa | Game Artist & Video Game Designer',
     'meta.desc': 'Portfolio of José María Martínez de la Casa Álvarez, video game designer and developer. Digital art, 3D modeling, video editing and sound production.',
@@ -160,6 +282,7 @@ const I18N = {
     'about.edu': '<span>Education</span>Degree in Video Game Design and Development · Universitat Jaume I',
     'about.lang': '<span>Languages</span>Spanish, Valencian and English',
     'about.loc': 'Location',
+    'country': 'Spain',
 
     'stats.projects': 'Completed projects',
     'stats.tools': 'Work tools',
@@ -241,12 +364,60 @@ const I18N = {
   }
 };
 
+// =====================================================================
+// ===== Proyectos en valenciano (la ventana de detalle) =====
+// Las tarjetas del HTML guardan título y descripción en español (data-title / data-desc).
+// Para el valenciano se buscan aquí; si no hay traducción, se muestra el español.
+// =====================================================================
+const PROJECT_VA = {
+  titles: {
+    'Modelo 3D de habitación': "Model 3D d'habitació",
+    'Espada de Tanjiro': 'Espasa de Tanjiro',
+    'Bote de colonia': 'Pot de colònia',
+    'Sombrero de Luffy': 'Barret de Luffy',
+    'Ben Lobo': 'Ben Llop',
+    'Ben Lobo – Vista 2': 'Ben Llop – Vista 2',
+    'Objetos Low Poly para Videojuegos': 'Objectes Low Poly per a Videojocs'
+  },
+  descs: {
+    'Ilustración digital creada mediante herramientas de diseño gráfico, con especial atención a la composición, el color y el acabado visual.':
+      "Il·lustració digital creada mitjançant eines de disseny gràfic, amb especial atenció a la composició, el color i l'acabat visual.",
+    'Modelado y texturizado 3D de un arma, trabajando la geometría, los materiales y los detalles visuales.':
+      "Modelatge i texturització 3D d'una arma, treballant la geometria, els materials i els detalls visuals.",
+    'Proyecto de modelado y texturizado de un entorno interior en 3D.':
+      "Projecte de modelatge i texturització d'un entorn interior en 3D.",
+    'Modelado y texturizado de un bote de colonia.':
+      "Modelatge i texturització d'un pot de colònia.",
+    'Modelado y texturizado del sombrero de Luffy.':
+      'Modelatge i texturització del barret de Luffy.',
+    'Modelado de personaje.':
+      'Modelatge de personatge.',
+    'CAMBIAR: descripción.':
+      'CANVIAR: descripció.',
+    'Creación de una colección de objetos y elementos de entorno con estética low poly, diseñados para su integración en videojuegos.':
+      "Creació d'una col·lecció d'objectes i elements d'entorn amb estètica low poly, dissenyats per a integrar-los en videojocs."
+  }
+};
+
+function projectTitleVa(esTitle) {
+  if (PROJECT_VA.titles[esTitle]) return PROJECT_VA.titles[esTitle];
+  // "Nombre – Wallpaper" → "Nombre – Fons de pantalla"
+  return esTitle.replace(/ – Wallpaper$/, ' – Fons de pantalla');
+}
+
 // Claves cuyo texto lleva HTML dentro (<strong>, <span>...)
 const HTML_KEYS = new Set(['about.p1', 'about.spec', 'about.edu', 'about.lang']);
 
-let lang = localStorage.getItem('lang') ||
-  (navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en';
-if (localStorage.getItem('lang')) lang = localStorage.getItem('lang');
+// ===== Idioma inicial: el guardado → el del navegador (es / ca→va / resto→en) =====
+function detectLang() {
+  const saved = localStorage.getItem('lang');
+  if (LANGS.includes(saved)) return saved;
+  const nav = (navigator.language || 'es').toLowerCase();
+  if (nav.startsWith('ca')) return 'va';
+  if (nav.startsWith('es')) return 'es';
+  return 'en';
+}
+let lang = detectLang();
 
 const t = key => (I18N[lang] && I18N[lang][key]) ?? I18N.es[key] ?? key;
 
@@ -259,6 +430,17 @@ const FLAGS = {
   es: `<svg viewBox="0 0 750 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
          <rect width="750" height="500" fill="#AA151B"/>
          <rect y="125" width="750" height="250" fill="#F1BF00"/>
+       </svg>`,
+  // Senyera con franja azul (bandera de la Comunitat Valenciana)
+  va: `<svg viewBox="0 0 90 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+         <rect width="90" height="60" fill="#FCDD09"/>
+         <g fill="#DA121A">
+           <rect y="6.67" width="90" height="6.67"/>
+           <rect y="20" width="90" height="6.67"/>
+           <rect y="33.33" width="90" height="6.67"/>
+           <rect y="46.67" width="90" height="6.67"/>
+         </g>
+         <rect width="20" height="60" fill="#0054A6"/>
        </svg>`,
   en: `<svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
          <clipPath id="ukClip"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath>
@@ -274,7 +456,7 @@ const FLAGS = {
 function applyLang(newLang) {
   lang = newLang;
   localStorage.setItem('lang', lang);
-  root.lang = lang;
+  root.lang = lang === 'va' ? 'ca-valencia' : lang;
   document.title = t('meta.title');
   if (metaDesc) metaDesc.content = t('meta.desc');
 
@@ -311,7 +493,9 @@ function applyLang(newLang) {
   if (currentCard) fillModal(currentCard);
 }
 
-langBtn.addEventListener('click', () => applyLang(lang === 'es' ? 'en' : 'es'));
+// Cada clic pasa al siguiente idioma: es → va → en → es
+langBtn.addEventListener('click', () =>
+  applyLang(LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length]));
 
 // ===== Tema claro/oscuro (se guarda en el navegador) =====
 const themeBtn = document.getElementById('themeToggle');
@@ -440,14 +624,24 @@ function unlockScroll() {
   root.style.scrollBehavior = '';
 }
 
-// Rellena la ventana en el idioma actual (usa data-title-en / data-desc-en si existen)
+// Rellena la ventana en el idioma actual
+// es → data-title / data-desc · en → data-title-en / data-desc-en · va → PROYECTO_VA
 function fillModal(card) {
   const d = card.dataset;
   const img = card.querySelector('img');
   mImg.src = img.currentSrc || img.src;
   mImg.alt = img.alt;
-  mTitle.textContent = (lang === 'en' && d.titleEn) ? d.titleEn : d.title;
-  mDesc.textContent = (lang === 'en' && d.descEn) ? d.descEn : d.desc;
+
+  let title = d.title, desc = d.desc;
+  if (lang === 'en') {
+    title = d.titleEn || d.title;
+    desc = d.descEn || d.desc;
+  } else if (lang === 'va') {
+    title = projectTitleVa(d.title);
+    desc = PROJECT_VA.descs[d.desc] || d.desc;
+  }
+  mTitle.textContent = title;
+  mDesc.textContent = desc;
   mTools.textContent = d.tools;
   mLink.style.display = d.link ? 'inline-flex' : 'none';
   mLink.href = d.link || '#';
